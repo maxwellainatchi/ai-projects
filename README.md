@@ -6,7 +6,9 @@ A lightweight static portfolio for creative projects, using the restrained cyber
 
 `data/projects.json` is the single source of truth for portfolio projects. To add a project, add one object to that file and place its images under `assets/projects/<slug>/`.
 
-Fields: `slug`, `title`, `summary`, `description`, `year`, `status`, `category`, `tags`, `cover`, `gallery`, and `links` (`live`, `source`). Empty optional links are not rendered.
+Fields: `slug`, `title`, `summary`, `description`, `year`, `status`, `category`, `tags`, `cover`, optional `thumbnail`, `gallery`, and `links` (`live`, `source`). The thumbnail is used on project cards when present; otherwise the cover is used. Empty optional links are not rendered.
+
+`assets/mark.svg` is the brand mark and favicon, while `assets/frame-sigil.svg` supplies the corner geometry. The architectural artwork lives in optimized WebP files under `assets/`.
 
 ## Local preview
 

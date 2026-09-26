@@ -29,13 +29,16 @@ test('styles include accessibility motion/focus rules', async () => {
   assert.match(css, /:focus-visible/);
 });
 
-test('ghostcast cover asset exists', async () => {
-  await access('assets/projects/ghostcast/cover.svg');
+test('portfolio artwork referenced by pages and project data exists', async () => {
+  const projects = JSON.parse(await readFile('data/projects.json', 'utf8'));
+  for (const asset of ['assets/hero.webp', 'assets/mark.svg', 'assets/frame-sigil.svg', ...projects.flatMap(({ cover, thumbnail, gallery }) => [cover, thumbnail, ...gallery])]) {
+    await access(asset);
+  }
 });
 
 test('polished shell classes have matching styles', async () => {
   const css = await readFile('css/styles.css','utf8');
-  for (const selector of ['.shell','.corner-mark','.page-heading','.about-grid','.about-art','.hero-visual .moon','.hero-visual .portal','.site-footer']) {
+  for (const selector of ['.shell','.ritual-node','.page-heading','.about-grid','.about-art','.hero-art','.site-footer']) {
     assert.ok(css.includes(selector), `missing ${selector}`);
   }
 });

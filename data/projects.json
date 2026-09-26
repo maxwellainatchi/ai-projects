@@ -11,8 +11,14 @@
     "status": "experiment",
     "category": "Audio",
     "tags": ["Audio", "Experiment"],
-    "cover": "assets/projects/ghostcast/cover.svg",
-    "gallery": [],
+    "cover": "assets/projects/ghostcast/cover.webp",
+    "thumbnail": "assets/projects/ghostcast/thumbnail.webp",
+    "gallery": [
+      "assets/projects/ghostcast/thumbnail.webp",
+      "assets/projects/ghostcast/gallery-01.webp",
+      "assets/projects/ghostcast/gallery-02.webp",
+      "assets/projects/ghostcast/gallery-03.webp"
+    ],
     "links": {"live": "", "source": ""}
   }
 ]
