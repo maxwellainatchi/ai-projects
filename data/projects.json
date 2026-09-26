@@ -49,7 +49,7 @@
     "cover": "assets/projects/dirhaven/cover.webp",
     "thumbnail": "assets/projects/dirhaven/thumbnail.webp",
     "gallery": [],
-    "links": {"live": "assets/projects/dirhaven/demo.html", "liveLabel": "Explore the sample town", "source": "https://github.com/maxwellainatchi/dirhaven"}
+    "links": {"live": "assets/projects/dirhaven/demo.html", "liveLabel": "Explore the sample town", "source": ""}
   },
   {
     "slug": "sunder",
