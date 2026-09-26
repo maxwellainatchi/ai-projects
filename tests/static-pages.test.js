@@ -41,7 +41,7 @@ test('portfolio artwork referenced by pages and project data exists', async () =
 
 test('polished shell classes have matching styles', async () => {
   const css = await readFile('css/styles.css','utf8');
-  for (const selector of ['.shell','.ritual-node','.page-heading','.about-grid','.about-art','.hero-art','.site-footer']) {
+  for (const selector of ['.shell','.ritual-node','.page-heading','.about-grid','.about-art','.hero-summary','.site-footer']) {
     assert.ok(css.includes(selector), `missing ${selector}`);
   }
 });
