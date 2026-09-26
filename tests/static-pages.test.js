@@ -34,6 +34,9 @@ test('portfolio artwork referenced by pages and project data exists', async () =
   for (const asset of ['assets/hero.webp', 'assets/mark.svg', 'assets/frame-sigil.svg', ...projects.flatMap(({ cover, thumbnail, gallery }) => [cover, thumbnail, ...gallery])]) {
     await access(asset);
   }
+  for (const project of projects) {
+    if (project.links?.live && !/^https?:\/\//.test(project.links.live)) await access(project.links.live);
+  }
 });
 
 test('polished shell classes have matching styles', async () => {
