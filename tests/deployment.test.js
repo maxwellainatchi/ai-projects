@@ -6,6 +6,7 @@ test('Pages workflow deploys repository root', async () => {
   const yml = await readFile('.github/workflows/pages.yml','utf8');
   for (const action of ['actions/configure-pages','actions/upload-pages-artifact','actions/deploy-pages']) assert.match(yml,new RegExp(action));
   assert.match(yml,/path:\s*\./);
+  assert.match(yml,/enablement:\s*true/);
 });
 test('.nojekyll exists', async () => { await access('.nojekyll'); });
 test('README identifies projects.json as project content source', async () => {
