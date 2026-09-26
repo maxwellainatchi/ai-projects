@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "ghostcast",
+    "title": "Ghostcast",
+    "summary": "Turn an article, note, link, or idea into a conversational audio experience.",
+    "description": [
+      "Ghostcast is a small experiment in turning source material into something you can listen to instead of read.",
+      "The project focuses on making generated conversations feel natural and useful without burying the experience under controls or novelty."
+    ],
+    "year": 2026,
+    "status": "experiment",
+    "category": "Audio",
+    "tags": ["Audio", "Experiment"],
+    "cover": "assets/projects/ghostcast/cover.svg",
+    "gallery": [],
+    "links": {"live": "", "source": ""}
+  }
+]
