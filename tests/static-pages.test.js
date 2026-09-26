@@ -8,7 +8,7 @@ for (const page of pages) {
   test(`${page} has semantic main and relative stylesheet/navigation`, async () => {
     const html = await readFile(page, 'utf8');
     assert.match(html, /<main[\s>]/i);
-    assert.match(html, /href="css\/styles\.css"/);
+    assert.match(html, /href="css\/styles\.css\?v=[^"]+"/);
     const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((m) => m[1]);
     assert.ok(hrefs.filter((h) => !h.startsWith('http') && !h.startsWith('mailto:')).every((h) => !h.startsWith('/')));
   });
