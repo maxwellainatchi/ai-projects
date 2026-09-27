@@ -29,6 +29,11 @@ test('detail with links and gallery renders them', () => {
   assert.match(html, /class="gallery"/);
 });
 
+test('project artwork precedes the detail copy', () => {
+  const html = renderProjectDetailHTML(project);
+  assert.ok(html.indexOf('class="detail-media"') < html.indexOf('class="detail-content"'));
+});
+
 test('detail uses the supplied action label for a readable project artifact', () => {
   const html = renderProjectDetailHTML({...project, coverMode:'contain', links:{live:'assets/projects/cookbook/book.pdf',liveLabel:'Read the cookbook'}});
   assert.match(html, /Read the cookbook/);

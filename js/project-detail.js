@@ -1,5 +1,5 @@
 import { loadProjects, getProjectBySlug } from './project-data.js';
-import { renderProjectDetail } from './rendering.js';
+import { renderProjectDetail } from './rendering.js?v=20260927a';
 const container = document.querySelector('#project-detail');
 const status = document.querySelector('#page-status');
 try {
