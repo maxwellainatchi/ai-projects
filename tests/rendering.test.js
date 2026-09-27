@@ -14,7 +14,7 @@ test('project card includes core fields and relative detail link', () => {
   assert.match(html, /conversational audio/);
   assert.match(html, /cover\.svg/);
   assert.match(html, /Audio/);
-  assert.match(html, /project\.html\?slug=ghostcast/);
+  assert.match(html, /href="project\/ghostcast"/);
 });
 
 test('blank optional links and empty gallery render no empty chrome', () => {

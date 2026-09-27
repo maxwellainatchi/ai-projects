@@ -23,6 +23,23 @@ test('project list and detail expose stable hooks', async () => {
   assert.match(detail, /id="page-status"/);
 });
 
+test('each project has a crawlable clean URL with its own link preview', async () => {
+  const projects = JSON.parse(await readFile('data/projects.json', 'utf8'));
+  for (const project of projects) {
+    const html = await readFile(`project/${project.slug}/index.html`, 'utf8');
+    assert.match(html, /<article[^>]*id="project-detail"/);
+    assert.ok(html.includes(`<title>${project.title} — Maxwell Ainatchi</title>`));
+    assert.ok(html.includes(`content="${project.summary}"`));
+    assert.ok(html.includes(`content="https://ai.ainatchi.me/project/${project.slug}"`));
+    assert.ok(html.includes(`content="https://ai.ainatchi.me/${project.cover}"`));
+    assert.match(html, /property="og:title"/);
+    assert.match(html, /property="og:description"/);
+    assert.match(html, /property="og:image"/);
+    assert.match(html, /name="twitter:card" content="summary_large_image"/);
+    assert.ok(html.includes(project.description[0]));
+  }
+});
+
 test('styles include accessibility motion/focus rules', async () => {
   const css = await readFile('css/styles.css','utf8');
   assert.match(css, /prefers-reduced-motion/);

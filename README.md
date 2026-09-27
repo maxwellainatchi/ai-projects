@@ -12,9 +12,12 @@ The homepage reads this JSON and composes a current-year overview. `homeBlurb` h
 
 `assets/mark.svg` is the brand mark and favicon, while `assets/frame-sigil.svg` supplies the corner geometry. The architectural artwork lives in optimized WebP files under `assets/`.
 
+Each project gets a static page at `project/<slug>/index.html`, generated from the JSON by `npm run build`. Project cards link to `/project/<slug>` (relative to the site root); GitHub Pages may redirect to a trailing slash. The generated HTML contains project-specific title, description, canonical URL, Open Graph, and Twitter preview tags. The canonical domain is read from `CNAME`. The older `project.html?slug=<slug>` links redirect in browsers to the clean URL.
+
 ## Local preview
 
 ```bash
+npm run build
 python3 -m http.server 4173
 ```
 
@@ -28,4 +31,4 @@ npm test
 
 ## Deployment
 
-Pushes to `main` deploy the repository root to GitHub Pages through `.github/workflows/pages.yml`.
+Pushes to `main` rebuild and test the project pages, then deploy the repository root to GitHub Pages through `.github/workflows/pages.yml`. Commit the generated pages when adding or changing projects so branch-based Pages publishing has the same content.
