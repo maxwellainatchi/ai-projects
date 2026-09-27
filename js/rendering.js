@@ -5,6 +5,10 @@ export function renderProjectCardHTML(project) {
   const imageClass = project.coverMode === 'contain' ? ' contain-art' : '';
   return `<article class="project-card"><div class="project-card-media${imageClass}"><img src="${esc(project.thumbnail || project.cover)}" alt="" loading="lazy"></div><div class="project-card-body"><div><h2>${esc(project.title)}</h2><p>${esc(project.summary)}</p><div class="tag-row">${tags}</div></div><a class="card-link" href="project/${encodeURIComponent(project.slug)}" aria-label="View ${esc(project.title)}">→</a></div></article>`;
 }
+export function renderInDevelopmentCardHTML(project) {
+  const tags = (project.tags || []).map(tag => `<span class="tag">${esc(tag)}</span>`).join('');
+  return `<article class="project-card development-card"><div class="project-card-media"><img src="${esc(project.image)}" alt="${esc(project.title)} concept artwork" loading="lazy"></div><div class="project-card-body"><h2>${esc(project.title)}</h2><p>${esc(project.summary)}</p><div class="tag-row">${tags}</div></div></article>`;
+}
 export function renderProjectDetailHTML(project) {
   const paragraphs = (project.description || []).map(p => `<p>${esc(p)}</p>`).join('');
   const tags = (project.tags || []).map(tag => `<span class="tag">${esc(tag)}</span>`).join('');

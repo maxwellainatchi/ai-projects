@@ -16,3 +16,5 @@
 .project-card-media.contain-art,.detail-image.contain-art{background:#17120f}
 .project-card-media.contain-art img,.detail-image.contain-art img{object-fit:contain;opacity:1;filter:none}
 .project-card-media.contain-art:after,.detail-image.contain-art:after{display:none}
+.development-heading{padding-bottom:38px}.development-heading .lede{max-width:650px}.development-heading h1{font-size:clamp(42px,6vw,74px)}.development-card .project-card-body{display:block;padding:24px 28px 28px}.development-card .project-card-body p{max-width:none}.development-card .project-card-media img{opacity:1;filter:saturate(.9) brightness(.94)}.development-card .project-card-media:after{background:linear-gradient(180deg,transparent 55%,rgba(8,10,11,.23))}
+@media(max-width:620px){.site-header{flex-direction:column}.nav{justify-content:flex-start;gap:12px 22px}.development-card .project-card-body{padding:22px}}

@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { renderProjectCardHTML, renderProjectDetailHTML, filterProjects } from '../js/rendering.js';
+import * as rendering from '../js/rendering.js';
 
 const project = {
   slug:'ghostcast', title:'Ghostcast', summary:'Turn source material into conversational audio.',
@@ -44,4 +45,16 @@ test('filterProjects matches category and All', () => {
   const list = [project,{...project,slug:'x',category:'Visual'}];
   assert.equal(filterProjects(list,'Audio').length,1);
   assert.equal(filterProjects(list,'All').length,2);
+});
+
+test('in-development card shows its art and tags without a destination link', () => {
+  const html = rendering.renderInDevelopmentCardHTML({
+    title:'Webhaven', summary:'Explore web communities as connected settlements.',
+    image:'assets/in-development/webhaven.webp', tags:['Game','Web exploration']
+  });
+  assert.match(html, /Webhaven/);
+  assert.match(html, /connected settlements/);
+  assert.match(html, /webhaven\.webp/);
+  assert.match(html, /Web exploration/);
+  assert.doesNotMatch(html, /<a\b|href=/);
 });

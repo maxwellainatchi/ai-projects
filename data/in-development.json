@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Task Management",
+    "summary": "An offline-first, ADHD-friendly app for capturing ideas and turning them into doable tasks. Projects hold context, while capacity check-ins and commitments help shape the day without making a missed date a dead end.",
+    "tags": ["Productivity", "ADHD", "Android"],
+    "image": "assets/in-development/task-management.webp"
+  },
+  {
+    "title": "Travel Planner",
+    "summary": "A flexible place for bookings, activities, maps, and destination ideas. Itineraries can hold alternatives instead of locking every hour down, with live events and a trip journal planned as it grows.",
+    "tags": ["Travel", "Itineraries", "Maps"],
+    "image": "assets/in-development/travel-planner.webp"
+  },
+  {
+    "title": "Webhaven",
+    "summary": "A web exploration game where domains and pages become settlements. Explorers collect discoveries into topic-based communities, and the knowledge they find takes the form of residents in a growing world.",
+    "tags": ["Game", "Web exploration", "Communities"],
+    "image": "assets/in-development/webhaven.webp"
+  },
+  {
+    "title": "Fantasy Baseball",
+    "summary": "A pixel-art battle game that turns weekly fantasy baseball matchups into character fights. Player performance becomes moves and health; the first game loop will use mock data while Yahoo integration waits.",
+    "tags": ["Game", "Fantasy sports", "Pixel art"],
+    "image": "assets/in-development/fantasy-baseball.webp"
+  }
+]

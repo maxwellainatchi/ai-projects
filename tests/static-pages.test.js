@@ -2,12 +2,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
 
-const pages = ['index.html','projects.html','project.html','about.html','404.html'];
+const pages = ['index.html','projects.html','in-development.html','project.html','about.html','404.html'];
 
 for (const page of pages) {
   test(`${page} has semantic main and relative stylesheet/navigation`, async () => {
     const html = await readFile(page, 'utf8');
     assert.match(html, /<main[\s>]/i);
+    assert.match(html, /href="in-development\.html"/);
     assert.match(html, /href="css\/styles\.css\?v=[^"]+"/);
     const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((m) => m[1]);
     assert.ok(hrefs.filter((h) => !h.startsWith('http') && !h.startsWith('mailto:')).every((h) => !h.startsWith('/')));
@@ -21,6 +22,19 @@ test('project list and detail expose stable hooks', async () => {
   assert.match(list, /id="category-filters"/);
   assert.match(detail, /id="project-detail"/);
   assert.match(detail, /id="page-status"/);
+});
+
+test('in-development page lists four unlinked projects with descriptions, tags, and artwork', async () => {
+  const html = await readFile('in-development.html', 'utf8');
+  assert.match(html, /id="development-grid"/);
+  const entries = JSON.parse(await readFile('data/in-development.json', 'utf8'));
+  assert.deepEqual(entries.map(({ title }) => title), ['Task Management', 'Travel Planner', 'Webhaven', 'Fantasy Baseball']);
+  for (const entry of entries) {
+    assert.ok(entry.summary.length > 40);
+    assert.ok(entry.tags.length >= 2);
+    assert.ok(!entry.links && !entry.url);
+    await access(entry.image);
+  }
 });
 
 test('each project has a crawlable clean URL with its own link preview', async () => {
