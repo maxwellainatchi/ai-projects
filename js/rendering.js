@@ -3,7 +3,7 @@ export function filterProjects(projects, category) { return !category || categor
 export function renderProjectCardHTML(project) {
   const tags = (project.tags || []).map(tag => `<span class="tag">${esc(tag)}</span>`).join('');
   const imageClass = project.coverMode === 'contain' ? ' contain-art' : '';
-  return `<article class="project-card"><div class="project-card-media${imageClass}"><img src="${esc(project.thumbnail || project.cover)}" alt="" loading="lazy"></div><div class="project-card-body"><div><h2>${esc(project.title)}</h2><p>${esc(project.summary)}</p><div class="tag-row">${tags}</div></div><a class="card-link" href="project/${encodeURIComponent(project.slug)}" aria-label="View ${esc(project.title)}">→</a></div></article>`;
+  return `<a class="project-card" href="project/${encodeURIComponent(project.slug)}" aria-label="View ${esc(project.title)}"><div class="project-card-media${imageClass}"><img src="${esc(project.thumbnail || project.cover)}" alt="" loading="lazy"></div><div class="project-card-body"><div><h2>${esc(project.title)}</h2><p>${esc(project.summary)}</p><div class="tag-row">${tags}</div></div><span class="card-link" aria-hidden="true">→</span></div></a>`;
 }
 export function renderInDevelopmentCardHTML(project) {
   const tags = (project.tags || []).map(tag => `<span class="tag">${esc(tag)}</span>`).join('');

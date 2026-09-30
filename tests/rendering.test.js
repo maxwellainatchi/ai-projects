@@ -18,6 +18,12 @@ test('project card includes core fields and relative detail link', () => {
   assert.match(html, /href="project\/ghostcast"/);
 });
 
+test('the project card link encloses its image, title, and summary', () => {
+  const html = renderProjectCardHTML(project);
+  assert.match(html, /<a\b[^>]*href="project\/ghostcast"[^>]*>[\s\S]*class="project-card-media[^"]*"[\s\S]*<h2>Ghostcast<\/h2>[\s\S]*conversational audio\.[\s\S]*<\/a>/);
+  assert.equal((html.match(/<a\b/g) || []).length, 1);
+});
+
 test('blank optional links and empty gallery render no empty chrome', () => {
   const html = renderProjectDetailHTML(project);
   assert.doesNotMatch(html, /Launch project|View source|class="gallery"/);
