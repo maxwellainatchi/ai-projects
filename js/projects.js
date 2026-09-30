@@ -1,5 +1,5 @@
 import { loadProjects, getCategories } from './project-data.js';
-import { filterProjects, renderProjectGrid } from './rendering.js';
+import { filterProjects, renderProjectGrid } from './rendering.js?v=20260930';
 const grid = document.querySelector('#project-grid');
 const filters = document.querySelector('#category-filters');
 const status = document.querySelector('#page-status');
