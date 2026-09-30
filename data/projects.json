@@ -15,7 +15,7 @@
     "cover": "assets/projects/ghostcast/cover.webp",
     "thumbnail": "assets/projects/ghostcast/thumbnail.webp",
     "gallery": [],
-    "links": {"live": "", "source": ""}
+    "links": {"live": "https://ghostcast-smoky.vercel.app/", "source": ""}
   },
   {
     "slug": "god-is-a-dick",
