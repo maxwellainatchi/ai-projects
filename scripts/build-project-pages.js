@@ -17,8 +17,14 @@ const domain = (await readFile('CNAME', 'utf8')).trim();
 const origin = `https://${domain}/`;
 const seen = new Set();
 
-for (const project of projects) {
+for (const [index, project] of projects.entries()) {
   const { slug, title, summary, cover } = project;
+  // Previous/next wrap around the index so browsing never dead-ends.
+  const prevIndex = (index - 1 + projects.length) % projects.length;
+  const nextIndex = (index + 1) % projects.length;
+  const context = projects.length > 1
+    ? { index, prev: projects[prevIndex], prevIndex, next: projects[nextIndex], nextIndex }
+    : { index };
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || seen.has(slug)) {
     throw new Error(`Invalid or duplicate project slug: ${slug}`);
   }
@@ -45,7 +51,7 @@ for (const project of projects) {
     `<base href="../../"><meta name="description" content="${escapeHTML(summary)}">${metadata}`);
   html = replaceOnce(html, '<title>Project — Maxwell Ainatchi</title>', `<title>${escapeHTML(name)}</title>`);
   html = replaceOnce(html, '<p id="page-status" class="status" role="status">Loading project…</p><article id="project-detail"></article>',
-    `<article id="project-detail">${renderProjectDetailHTML(project)}</article>`);
+    `<article id="project-detail">${renderProjectDetailHTML(project, context)}</article>`);
   html = replaceOnce(html, '<script type="module" src="js/project-detail.js?v=20260927a"></script>', '');
 
   const dir = join('project', slug);

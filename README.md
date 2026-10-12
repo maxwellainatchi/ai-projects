@@ -1,20 +1,20 @@
 # AI Projects Portfolio
 
-A lightweight static portfolio for creative projects, using the restrained cyberpunk/occult visual direction developed for the site.
+A lightweight static portfolio for creative projects, in a ritual design: a dark ground, one red, and Latin incantations set in blackletter that struggle to stay anchored and now and then slip into their English translation. The English copy stays plain.
 
 ## Project content
 
 `data/projects.json` is the single source of truth for portfolio projects. To add a project, add one object to that file and place its images under `assets/projects/<slug>/`.
 
-Fields: `slug`, `title`, `summary`, `description`, `year`, `status`, `category`, `tags`, `cover`, optional `thumbnail`, `coverMode`, and `homeBlurb`, `gallery`, and `links` (`live`, optional `liveLabel`, `source`). The thumbnail is used on project cards when present; otherwise the cover is used. Set `coverMode` to `contain` for portrait artwork. Empty optional links are not rendered.
+Fields: `slug`, `title`, `summary`, `description`, `year`, `status` (`live`, `preview`, `prototype`, `experiment` or `complete`), `category`, `tags`, `madeWith` (the tools used, such as `["Claude", "ChatGPT"]`), `cover`, optional `thumbnail`, `coverMode`, `homeBlurb`, `promises`, `featured`, `gallery`, and `links` (`live`, optional `liveLabel`, `source`). The thumbnail is used in the index when present; otherwise the cover is used. Set `coverMode` to `contain` for portrait artwork. `promises` lists what the project will and won't do and appears in its own block on the project page. Set `featured: true` to pin a project to the "Latest" slot on the home page; otherwise the first project is shown. Empty optional links are not rendered.
 
-The homepage reads this JSON and composes a current-year overview. `homeBlurb` holds a short written line for the overview; if omitted, the project title and `summary` are used. A new project with the current `year` appears automatically. The homepage artwork in `assets/hero.webp` is a shared background on all portfolio pages.
+The home page is the index. It shows the latest project, the full list of projects with category filters (numbered in Roman numerals by their order in the JSON), and a strip of work on the bench. `projects.html` forwards to it. The About page totals the `madeWith` credits across all projects.
 
-`assets/mark.svg` is the brand mark and favicon, while `assets/frame-sigil.svg` supplies the corner geometry. The architectural artwork lives in optimized WebP files under `assets/`.
+`data/in-development.json` powers the **Workbench** page (`in-development.html`) and the bench strip on the home page. Each entry has a `title`, `summary`, `tags`, an `image` under `assets/in-development/`, and a `stage`: `sketch`, `building`, `testing` or `released`, shown as a moon phase. These entries deliberately have no project or source links and are not included in the index.
 
-`data/in-development.json` powers the separate **In development** page. Each entry has a `title`, `summary`, `tags`, and an `image` under `assets/in-development/`. These cards deliberately have no project or source links and are not included in the released collection or the homepage year summary.
+Each project gets a static page at `project/<slug>/index.html`, generated from the JSON by `npm run build`, with previous/next links that wrap around the index. Project cards link to `/project/<slug>` (relative to the site root); GitHub Pages may redirect to a trailing slash. The generated HTML contains project-specific title, description, canonical URL, Open Graph, and Twitter preview tags. The canonical domain is read from `CNAME`. The older `project.html?slug=<slug>` links redirect in browsers to the clean URL.
 
-Each project gets a static page at `project/<slug>/index.html`, generated from the JSON by `npm run build`. Project cards link to `/project/<slug>` (relative to the site root); GitHub Pages may redirect to a trailing slash. The generated HTML contains project-specific title, description, canonical URL, Open Graph, and Twitter preview tags. The canonical domain is read from `CNAME`. The older `project.html?slug=<slug>` links redirect in browsers to the clean URL.
+`assets/mark.svg` is the brand mark and favicon, `assets/frame-sigil.svg` supplies the frame corners, and `assets/hero.webp` is the shared background artwork. Fonts (Cormorant Garamond, EB Garamond, IBM Plex Mono and UnifrakturMaguntia) load from Google Fonts. All motion stops when the visitor prefers reduced motion, and the English translations are hidden from screen readers so the Latin is read once.
 
 ## Local preview
 
