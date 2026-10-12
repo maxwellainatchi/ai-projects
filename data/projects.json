@@ -1,5 +1,23 @@
 [
   {
+    "slug": "depot",
+    "title": "Depot",
+    "summary": "One desktop window for every package manager: what is installed, what has updates, and what happened.",
+    "homeBlurb": "Depot gathers Homebrew, the Mac App Store, npm, pipx, Cargo and winget into one window, and shows every command it runs.",
+    "description": [
+      "Depot is a desktop app for macOS and Windows that lists every package from every package manager in one place, groups pending updates by source, searches all sources at once, and keeps a history with a revert where the manager allows one.",
+      "It never changes anything except by running the package manager's own command, and each command appears in its log exactly as it was run. It is in preview with a small group of testers. Made with Claude."
+    ],
+    "year": 2026,
+    "status": "preview",
+    "category": "Apps",
+    "tags": ["Desktop app", "Package managers", "Claude"],
+    "cover": "assets/projects/depot/cover.webp",
+    "thumbnail": "assets/projects/depot/thumbnail.webp",
+    "gallery": [],
+    "links": {"live": "https://maxwellainatchi.github.io/depot-site/", "liveLabel": "Visit the Depot site", "source": ""}
+  },
+  {
     "slug": "ghostcast",
     "title": "Ghostcast",
     "summary": "Go live to an AI chat audience that reacts to your voice, camera, and stream moments.",
