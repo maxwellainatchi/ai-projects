@@ -5,6 +5,6 @@ try {
   const projects = await loadProjects();
   const slug = new URLSearchParams(window.location.search).get('slug');
   const project = getProjectBySlug(projects, slug);
-  if (!project) { status.textContent = 'Project not found.'; container.innerHTML = '<div class="not-found"><h1>Project not found.</h1><p>The requested project is not in this collection.</p><a class="button" href="projects.html">Back to projects →</a></div>'; }
+  if (!project) { status.textContent = 'Project not found.'; container.innerHTML = '<div class="not-found"><h1>Project not found.</h1><p>The requested project is not in this collection.</p><a class="button" href="index.html#index">Back to the index →</a></div>'; }
   else { window.location.replace(`project/${encodeURIComponent(project.slug)}`); }
 } catch { status.textContent = 'Unable to load projects.'; }

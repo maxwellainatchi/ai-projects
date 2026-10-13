@@ -11,11 +11,26 @@
     "year": 2026,
     "status": "preview",
     "category": "Apps",
-    "tags": ["Desktop app", "Package managers", "Claude"],
+    "tags": [
+      "Desktop app",
+      "Package managers"
+    ],
     "cover": "assets/projects/depot/cover.webp",
     "thumbnail": "assets/projects/depot/thumbnail.webp",
     "gallery": [],
-    "links": {"live": "https://maxwellainatchi.github.io/depot-site/", "liveLabel": "Visit the Depot site", "source": ""}
+    "links": {
+      "live": "https://maxwellainatchi.github.io/depot-site/",
+      "liveLabel": "Visit the Depot site",
+      "source": ""
+    },
+    "madeWith": [
+      "Claude"
+    ],
+    "promises": [
+      "It never changes anything except by running the package manager’s own command.",
+      "Every command appears in its log exactly as it was run.",
+      "It reverts only where the manager allows one."
+    ]
   },
   {
     "slug": "ghostcast",
@@ -29,11 +44,25 @@
     "year": 2026,
     "status": "experiment",
     "category": "Interactive",
-    "tags": ["App", "Streaming", "AI chat"],
+    "tags": [
+      "App",
+      "Streaming",
+      "AI chat"
+    ],
     "cover": "assets/projects/ghostcast/cover.webp",
     "thumbnail": "assets/projects/ghostcast/thumbnail.webp",
     "gallery": [],
-    "links": {"live": "https://ghostcast-smoky.vercel.app/", "source": ""}
+    "links": {
+      "live": "https://ghostcast-smoky.vercel.app/",
+      "source": ""
+    },
+    "madeWith": [
+      "Claude",
+      "ChatGPT"
+    ],
+    "promises": [
+      "Nothing is broadcast to other people."
+    ]
   },
   {
     "slug": "god-is-a-dick",
@@ -47,12 +76,23 @@
     "year": 2026,
     "status": "complete",
     "category": "Writing",
-    "tags": ["Cookbook", "Food", "Claude + ChatGPT"],
+    "tags": [
+      "Cookbook",
+      "Food"
+    ],
     "cover": "assets/projects/cookbook/cover.webp",
     "thumbnail": "assets/projects/cookbook/thumbnail.webp",
     "coverMode": "contain",
     "gallery": [],
-    "links": {"live": "assets/projects/cookbook/god-is-a-dick-sinfully-good.pdf", "liveLabel": "Read the cookbook", "source": ""}
+    "links": {
+      "live": "assets/projects/cookbook/god-is-a-dick-sinfully-good.pdf",
+      "liveLabel": "Read the cookbook",
+      "source": ""
+    },
+    "madeWith": [
+      "Claude",
+      "ChatGPT"
+    ]
   },
   {
     "slug": "dirhaven",
@@ -66,11 +106,25 @@
     "year": 2026,
     "status": "prototype",
     "category": "Interactive",
-    "tags": ["Game", "Filesystem", "Claude"],
+    "tags": [
+      "Game",
+      "Filesystem"
+    ],
     "cover": "assets/projects/dirhaven/cover.webp",
     "thumbnail": "assets/projects/dirhaven/thumbnail.webp",
     "gallery": [],
-    "links": {"live": "assets/projects/dirhaven/demo.html", "liveLabel": "Explore the sample town", "source": ""}
+    "links": {
+      "live": "assets/projects/dirhaven/demo.html",
+      "liveLabel": "Explore the sample town",
+      "source": ""
+    },
+    "madeWith": [
+      "Claude"
+    ],
+    "promises": [
+      "The world is generated without an LLM.",
+      "Files are read only when you choose to open them."
+    ]
   },
   {
     "slug": "sunder",
@@ -84,10 +138,23 @@
     "year": 2026,
     "status": "live",
     "category": "Apps",
-    "tags": ["App", "Receipt scanning", "Manus"],
+    "tags": [
+      "App",
+      "Receipt scanning"
+    ],
     "cover": "assets/projects/sunder/cover.webp",
     "thumbnail": "assets/projects/sunder/thumbnail.webp",
     "gallery": [],
-    "links": {"live": "https://sunder.manus.space/", "liveLabel": "Open Sunder", "source": ""}
+    "links": {
+      "live": "https://sunder.manus.space/",
+      "liveLabel": "Open Sunder",
+      "source": ""
+    },
+    "madeWith": [
+      "Manus"
+    ],
+    "promises": [
+      "People can join a split from a shared link without setting up an account."
+    ]
   }
 ]

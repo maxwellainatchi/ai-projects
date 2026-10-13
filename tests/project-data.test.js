@@ -12,6 +12,15 @@ test('seed data contains Ghostcast with useful copy', () => {
   assert.ok(ghostcast.summary.length > 0);
 });
 
+test('every project credits its tools and uses a known status', () => {
+  for (const project of data) {
+    assert.ok(Array.isArray(project.madeWith) && project.madeWith.length > 0, `${project.slug} needs madeWith`);
+    assert.ok(['live', 'preview', 'prototype', 'experiment', 'complete'].includes(project.status), `${project.slug} status`);
+    if (project.promises) assert.ok(project.promises.every((p) => typeof p === 'string' && p.length > 0));
+  }
+  assert.deepEqual(data.find((p) => p.slug === 'ghostcast').madeWith, ['Claude', 'ChatGPT']);
+});
+
 test('slug lookup returns Ghostcast and null for unknown projects', () => {
   assert.equal(getProjectBySlug(data, 'ghostcast')?.title, 'Ghostcast');
   assert.equal(getProjectBySlug(data, 'missing'), null);
