@@ -1,5 +1,38 @@
 [
   {
+    "slug": "the-story-distilled",
+    "title": "[The Story, Distilled]",
+    "summary": "Spoiler-aware statistics for The Wandering Inn: word counts, how often anything is mentioned, and every Skill the System grants.",
+    "homeBlurb": "[The Story, Distilled] counts The Wandering Inn, from its seventeen million words to every Skill granted, and never shows past the chapter you have read to.",
+    "description": [
+      "A statistics site for The Wandering Inn, the web serial by pirateaba. It totals words by chapter, volume and month, counts how often any character, place or phrase appears across the story, and tracks each Skill: when it was gained and how often it is used. Concepts and Skills link to the Wandering Inn Wiki.",
+      "Tell it the last chapter you have read and everything after it is hidden. It is styled as a grimoire, with drifting motes of light, a turning magic circle and Skills that glow like System text. Made with Claude."
+    ],
+    "year": 2026,
+    "status": "live",
+    "category": "Apps",
+    "tags": [
+      "Web app",
+      "Statistics",
+      "Fan project"
+    ],
+    "cover": "assets/projects/the-story-distilled/cover.webp",
+    "thumbnail": "assets/projects/the-story-distilled/thumbnail.webp",
+    "gallery": [],
+    "links": {
+      "live": "https://wandering-inn-statistics.vercel.app/",
+      "liveLabel": "Open the grimoire",
+      "source": ""
+    },
+    "madeWith": [
+      "Claude"
+    ],
+    "promises": [
+      "Nothing past the chapter you have read to is shown.",
+      "No chapter text is published: a search returns only counts per chapter, and every result links to the official chapter."
+    ]
+  },
+  {
     "slug": "bento",
     "title": "Bento",
     "summary": "Turn any JSON into a small app: drag fields onto a grid, pick how each one is shown, and run it.",
