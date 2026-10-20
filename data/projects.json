@@ -72,7 +72,7 @@
     "homeBlurb": "Depot gathers Homebrew, the Mac App Store, npm, pipx, Cargo, winget and more into one window, reaches your other Macs and Linux machines over SSH, and shows every command it runs.",
     "description": [
       "Depot is a desktop app for macOS and Windows that lists every package from every package manager in one place, groups pending updates by source, searches all sources at once, and keeps a history with a revert where the manager allows one. Health flags packages with known vulnerabilities or that their manager has deprecated, and Insights charts what is installed and how it changes.",
-      "It can also manage other Macs and Linux machines over SSH: Depot installs its small agent there itself, then shows that machine's packages and updates and runs installs, updates and removals on it. Windows machines are next. An AI assistant such as Claude can use Depot too, through its MCP server: off until you turn it on, read only or full access, and every change it queues shows in History.",
+      "It can also manage other Macs and Linux machines over SSH: Depot installs its small agent there itself, then shows that machine's packages and updates and runs installs, updates and removals on it. Windows machines are next, and an Android app reaches the same machines from your phone, over its own built-in SSH. An AI assistant such as Claude can use Depot too, through its MCP server: off until you turn it on, read only or full access, and every change it queues shows in History.",
       "It never changes anything except by running the package manager's own command, and each command appears in its log exactly as it was run. It is in preview (version 0.2.4) with a small group of testers, and it updates itself. Made with Claude."
     ],
     "year": 2026,
@@ -82,7 +82,8 @@
       "Desktop app",
       "Package managers",
       "SSH",
-      "MCP"
+      "MCP",
+      "Android"
     ],
     "cover": "assets/projects/depot/cover.webp",
     "thumbnail": "assets/projects/depot/thumbnail.webp",
