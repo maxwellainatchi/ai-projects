@@ -3,13 +3,14 @@ import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
 import { STAGES } from '../js/rendering.js';
 
-const pages = ['index.html', 'projects.html', 'in-development.html', 'project.html', 'about.html', '404.html'];
+const pages = ['index.html', 'projects.html', 'in-development.html', 'design-systems.html', 'project.html', 'about.html', '404.html'];
 
 for (const page of pages) {
   test(`${page} has semantic main, the ritual frame and relative stylesheet/navigation`, async () => {
     const html = await readFile(page, 'utf8');
     assert.match(html, /<main[\s>]/i);
     assert.match(html, /href="in-development\.html"/);
+    assert.match(html, /href="design-systems\.html"/);
     assert.match(html, /href="css\/styles\.css\?v=[^"]+"/);
     assert.match(html, /class="inc band t"/);
     assert.match(html, /class="te" aria-hidden="true"/);
