@@ -1,0 +1,2293 @@
+[
+ {
+  "name": "Ainatchi Ritual",
+  "themes": [
+   {
+    "id": "night",
+    "name": "Night"
+   }
+  ],
+  "colors": [
+   {
+    "n": "bg",
+    "u": "The ground of every page, and the backing behind frame bands and corner sigils so they cut the frame lines.",
+    "v": {
+     "night": "#090b0c"
+    }
+   },
+   {
+    "n": "panel",
+    "u": "Raised surfaces: the top stop of card and alert grounds, tooltips, select menus. Text tokens hold the same contrast here as on bg.",
+    "v": {
+     "night": "#101213"
+    }
+   },
+   {
+    "n": "text",
+    "u": "Primary text, headings and active controls on bg and panel (15.9:1).",
+    "v": {
+     "night": "#eee6dc"
+    }
+   },
+   {
+    "n": "text-soft",
+    "u": "Lede, body paragraphs and card copy on bg and panel (10.9:1).",
+    "v": {
+     "night": "#c8bfb7"
+    }
+   },
+   {
+    "n": "muted",
+    "u": "Nav and tab links at rest, help text, secondary copy (7.8:1 on bg).",
+    "v": {
+     "night": "#aaa198"
+    }
+   },
+   {
+    "n": "faint",
+    "u": "Meta lines, placeholders and disabled labels (5.6:1 on bg).",
+    "v": {
+     "night": "#8f8780"
+    }
+   },
+   {
+    "n": "tag-ink",
+    "u": "Neutral badge text (10.2:1 on bg).",
+    "v": {
+     "night": "#c2b9b0"
+    }
+   },
+   {
+    "n": "ink-warm",
+    "u": "Pull quotes and set-apart passages.",
+    "v": {
+     "night": "#e9e1d7"
+    }
+   },
+   {
+    "n": "ink-summary",
+    "u": "Testimonial quotes and display-italic subtitles.",
+    "v": {
+     "night": "#e0d7cd"
+    }
+   },
+   {
+    "n": "line-strong",
+    "u": "Borders of inputs, selects, checkboxes, switches and neutral badges (3.5:1 on bg, 3.4:1 on panel).",
+    "v": {
+     "night": "#6e6668"
+    }
+   },
+   {
+    "n": "line",
+    "u": "Card and alert borders, disabled control borders. Decorative (1.6:1): never the only cue for state.",
+    "v": {
+     "night": "#383436"
+    }
+   },
+   {
+    "n": "line-soft",
+    "u": "Row dividers, tab rails, progress tracks, skeleton ground.",
+    "v": {
+     "night": "#2a2729"
+    }
+   },
+   {
+    "n": "rust",
+    "u": "Ornamental rules: divider lines, framed media, stat rules, accordion top rule, spinner track.",
+    "v": {
+     "night": "#5b3336"
+    }
+   },
+   {
+    "n": "clot",
+    "u": "The page frame's inner line; hover border on inputs and cards; tooltip border.",
+    "v": {
+     "night": "#8f2f35"
+    }
+   },
+   {
+    "n": "blood",
+    "u": "The one red: primary actions, incantations, focus outlines, selected states, spinner arcs, danger (5.2:1 on bg).",
+    "v": {
+     "night": "#e64b50"
+    }
+   },
+   {
+    "n": "blood-bright",
+    "u": "The emphasised word inside a display headline (the <em> in 'imagined world').",
+    "v": {
+     "night": "#ef5a5f"
+    }
+   },
+   {
+    "n": "blood-soft",
+    "u": "Danger text inside alerts, badges and field errors (9.6:1 on bg).",
+    "v": {
+     "night": "#f0a0a2"
+    }
+   },
+   {
+    "n": "link-hover",
+    "u": "Link text on hover.",
+    "v": {
+     "night": "#ff9a9d"
+    }
+   },
+   {
+    "n": "label",
+    "u": "Mono-caps labels and field labels (5.2:1 on bg).",
+    "v": {
+     "night": "#d0605f"
+    }
+   },
+   {
+    "n": "verdigris",
+    "u": "Success: badge, alert border, glyph and title (9.1:1 on bg). Blue-green, so it reads apart from blood without hue alone; always paired with a word.",
+    "v": {
+     "night": "#8fb8b0"
+    }
+   },
+   {
+    "n": "brass",
+    "u": "Warning: badge, alert border, glyph and title (8.9:1 on bg); always paired with a word.",
+    "v": {
+     "night": "#d9a55b"
+    }
+   },
+   {
+    "n": "blood-top",
+    "u": "Top stop of the blood button's vertical gradient.",
+    "v": {
+     "night": "#9b343b"
+    }
+   },
+   {
+    "n": "blood-bottom",
+    "u": "Bottom stop of the blood button's gradient.",
+    "v": {
+     "night": "#6f2329"
+    }
+   },
+   {
+    "n": "on-blood",
+    "u": "Text on the primary button (7.1:1 on blood-top).",
+    "v": {
+     "night": "#ffffff"
+    }
+   },
+   {
+    "n": "veil-ground",
+    "u": "The blood ground under veiled media; shows through their luminosity blend.",
+    "v": {
+     "night": "#5e1f25"
+    }
+   },
+   {
+    "n": "contain-ground",
+    "u": "Letterbox ground behind media set to contain.",
+    "v": {
+     "night": "#17120f"
+    }
+   },
+   {
+    "n": "frame-line",
+    "u": "The page frame's outer border.",
+    "v": {
+     "night": "rgba(230,75,80,.55)"
+    }
+   },
+   {
+    "n": "frame-inner",
+    "u": "Inner hairline of framed and arched media.",
+    "v": {
+     "night": "rgba(230,75,80,.35)"
+    }
+   },
+   {
+    "n": "glow",
+    "u": "Resting text-shadow of incantations (0 0 12px).",
+    "v": {
+     "night": "rgba(230,75,80,.45)"
+    }
+   },
+   {
+    "n": "glow-strong",
+    "u": "Strongest red glow: the selected-tab and active-nav underline.",
+    "v": {
+     "night": "rgba(230,75,80,.8)"
+    }
+   }
+  ],
+  "shadows": [
+   {
+    "n": "glow-button",
+    "v": {
+     "night": "0 0 30px rgba(230,75,80,.3)"
+    }
+   },
+   {
+    "n": "glow-blood",
+    "v": {
+     "night": "0 0 26px rgba(230,75,80,.28), inset 0 1px 0 rgba(255,255,255,.12)"
+    }
+   },
+   {
+    "n": "glow-blood-hover",
+    "v": {
+     "night": "0 0 42px rgba(230,75,80,.5), inset 0 1px 0 rgba(255,255,255,.18)"
+    }
+   },
+   {
+    "n": "glow-filter",
+    "v": {
+     "night": "0 0 14px rgba(230,75,80,.25)"
+    }
+   },
+   {
+    "n": "lift",
+    "v": {
+     "night": "0 18px 40px rgba(0,0,0,.6)"
+    }
+   },
+   {
+    "n": "glow-line",
+    "v": {
+     "night": "0 0 10px rgba(230,75,80,.8)"
+    }
+   },
+   {
+    "n": "veil-vignette",
+    "v": {
+     "night": "inset 0 0 40px rgba(0,0,0,.7)"
+    }
+   }
+  ],
+  "families": {
+   "blackletter": "'UnifrakturMaguntia', 'Old English Text MT', serif",
+   "display": "'Cormorant Garamond', Georgia, serif",
+   "body": "'EB Garamond', Georgia, serif",
+   "mono": "'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+  },
+  "groups": [
+   {
+    "name": "Incantation",
+    "family": "blackletter",
+    "styles": [
+     {
+      "name": "inc-hero",
+      "fontSize": "64px",
+      "lineHeight": 1,
+      "fontWeight": 400,
+      "letterSpacing": "0.03em",
+      "sample": "Experior",
+      "usage": "A one-word incantation heading a feature or principle card."
+     },
+     {
+      "name": "inc-heading",
+      "fontSize": "40px",
+      "lineHeight": 1,
+      "fontWeight": 400,
+      "letterSpacing": "0.03em",
+      "sample": "In fieri",
+      "usage": "Panel and footer incantations."
+     },
+     {
+      "name": "inc-kicker",
+      "fontSize": "22px",
+      "lineHeight": 1.15,
+      "fontWeight": 400,
+      "letterSpacing": "0.03em",
+      "sample": "Codex operum",
+      "usage": "Kicker above an English section title (SectionHead)."
+     },
+     {
+      "name": "inc-band",
+      "fontSize": "18px",
+      "lineHeight": "24px",
+      "fontWeight": 400,
+      "letterSpacing": "0.03em",
+      "sample": "daemon.exe invocare · ritus compilare noctis",
+      "usage": "Bands set into the page frame's edges (15px on side bands)."
+     },
+     {
+      "name": "drop-cap",
+      "fontSize": "76px",
+      "lineHeight": 0.8,
+      "fontWeight": 400,
+      "sample": "D",
+      "usage": "Floated initial of a long-form article's first paragraph."
+     }
+    ]
+   },
+   {
+    "name": "Display",
+    "family": "display",
+    "styles": [
+     {
+      "name": "display-xl",
+      "fontSize": "112px",
+      "lineHeight": 0.9,
+      "fontWeight": 400,
+      "letterSpacing": "-0.02em",
+      "sample": "Projects for an imagined world.",
+      "usage": "The one hero headline per page; clamp(56px, 8vw, 112px). Italicise one phrase in blood-bright."
+     },
+     {
+      "name": "display-l",
+      "fontSize": "72px",
+      "lineHeight": 0.95,
+      "fontWeight": 400,
+      "letterSpacing": "-0.02em",
+      "sample": "Everything in one window",
+      "usage": "Section titles; clamp(44px, 6vw, 72px)."
+     },
+     {
+      "name": "display-m",
+      "fontSize": "52px",
+      "lineHeight": 1,
+      "fontWeight": 400,
+      "sample": "Simple pricing",
+      "usage": "Sub-section titles and CTA banners."
+     },
+     {
+      "name": "stat",
+      "fontSize": "64px",
+      "lineHeight": 1,
+      "fontWeight": 400,
+      "letterSpacing": "-0.02em",
+      "sample": "12k",
+      "usage": "Stat values and prices (52px under 620px)."
+     },
+     {
+      "name": "heading",
+      "fontSize": "36px",
+      "lineHeight": 1.05,
+      "fontWeight": 400,
+      "sample": "How it works",
+      "usage": "Block headings inside a section."
+     },
+     {
+      "name": "quote",
+      "fontSize": "30px",
+      "lineHeight": 1.35,
+      "fontWeight": 400,
+      "fontStyle": "italic",
+      "sample": "It finally feels like one place.",
+      "usage": "Testimonial quotes; ink-summary."
+     },
+     {
+      "name": "pull",
+      "fontSize": "28px",
+      "lineHeight": 1.4,
+      "fontWeight": 400,
+      "fontStyle": "italic",
+      "sample": "Strange is allowed.",
+      "usage": "Pull lines and closing statements; ink-warm."
+     },
+     {
+      "name": "card-title",
+      "fontSize": "26px",
+      "lineHeight": 1.1,
+      "fontWeight": 500,
+      "sample": "Every source at once",
+      "usage": "Card and accordion question titles."
+     },
+     {
+      "name": "brand",
+      "fontSize": "19px",
+      "lineHeight": 1.2,
+      "fontWeight": 500,
+      "letterSpacing": "0.22em",
+      "sample": "MAXWELL AINATCHI",
+      "usage": "The wordmark beside the sigil; uppercase."
+     }
+    ]
+   },
+   {
+    "name": "Body",
+    "family": "body",
+    "styles": [
+     {
+      "name": "lede",
+      "fontSize": "22px",
+      "lineHeight": 1.55,
+      "fontWeight": 400,
+      "sample": "A collection of things made to explore ideas, atmosphere and play.",
+      "usage": "Intro paragraph under a headline, max 540px; text-soft."
+     },
+     {
+      "name": "body",
+      "fontSize": "18px",
+      "lineHeight": 1.6,
+      "fontWeight": 400,
+      "sample": "Half-formed ideas become real things.",
+      "usage": "Default text and input values (17px under 620px)."
+     },
+     {
+      "name": "card-body",
+      "fontSize": "17px",
+      "lineHeight": 1.55,
+      "fontWeight": 400,
+      "sample": "Search every source at once and see what changed.",
+      "usage": "Card copy, alert bodies, list items; text-soft."
+     },
+     {
+      "name": "small",
+      "fontSize": "15px",
+      "lineHeight": 1.5,
+      "fontWeight": 400,
+      "sample": "We send one email a month.",
+      "usage": "Help text and fine print; muted."
+     }
+    ]
+   },
+   {
+    "name": "Mono caps",
+    "family": "mono",
+    "styles": [
+     {
+      "name": "label",
+      "fontSize": "11px",
+      "lineHeight": 1.6,
+      "fontWeight": 500,
+      "letterSpacing": "0.24em",
+      "sample": "EXPERIMENTS · TOOLS · STRANGE LITTLE WORLDS",
+      "usage": "Eyebrow labels and footer links, uppercase, in label."
+     },
+     {
+      "name": "control",
+      "fontSize": "11px",
+      "lineHeight": 1.6,
+      "fontWeight": 500,
+      "letterSpacing": "0.22em",
+      "sample": "GET STARTED",
+      "usage": "Buttons, nav and tabs, uppercase (12px on large buttons, 10px on small)."
+     },
+     {
+      "name": "field-label",
+      "fontSize": "10.5px",
+      "lineHeight": 1.6,
+      "fontWeight": 500,
+      "letterSpacing": "0.2em",
+      "sample": "EMAIL ADDRESS",
+      "usage": "Form field labels, uppercase, in label."
+     },
+     {
+      "name": "meta",
+      "fontSize": "11px",
+      "lineHeight": 1.7,
+      "fontWeight": 500,
+      "letterSpacing": "0.14em",
+      "sample": "PER MONTH · BILLED YEARLY",
+      "usage": "Meta lines, units and captions, uppercase, in faint."
+     },
+     {
+      "name": "badge",
+      "fontSize": "10px",
+      "lineHeight": 1.6,
+      "fontWeight": 500,
+      "letterSpacing": "0.16em",
+      "sample": "NEW",
+      "usage": "Badges and tooltips, uppercase."
+     }
+    ]
+   }
+  ],
+  "spacing": [
+   {
+    "name": "space-4",
+    "value": "4px",
+    "usage": "Inset of inner hairlines in framed media and ritual cards."
+   },
+   {
+    "name": "space-8",
+    "value": "8px",
+    "usage": "Gap between badges and inside fields (label to input)."
+   },
+   {
+    "name": "space-12",
+    "value": "12px",
+    "usage": "Gap between buttons and form controls; framed-media padding."
+   },
+   {
+    "name": "space-16",
+    "value": "16px",
+    "usage": "Divider gaps; the frame's margin from the viewport (10px under 900px)."
+   },
+   {
+    "name": "space-20",
+    "value": "20px",
+    "usage": "Card grid gaps, header gaps, tab-panel top padding."
+   },
+   {
+    "name": "space-28",
+    "value": "28px",
+    "usage": "Card padding; gap between tabs, stats and footer links."
+   },
+   {
+    "name": "space-40",
+    "value": "40px",
+    "usage": "Hero column gap; nav link spacing."
+   },
+   {
+    "name": "space-56",
+    "value": "56px",
+    "usage": "Gap between a section head and its content."
+   },
+   {
+    "name": "space-72",
+    "value": "72px",
+    "usage": "Section gap under 900px; wide two-column gaps."
+   },
+   {
+    "name": "space-100",
+    "value": "100px",
+    "usage": "Gap between page sections."
+   }
+  ],
+  "radius": [
+   {
+    "name": "radius-none",
+    "value": "0",
+    "usage": "Everything rectangular: buttons, inputs, cards, badges, alerts, media. The system is square."
+   },
+   {
+    "name": "radius-round",
+    "value": "50%",
+    "usage": "Only true circles: radios, avatars, corner-sigil backing, and the arch's crown (50% 50% 0 0 / 34% 34% 0 0)."
+   }
+  ],
+  "slug": "ritual",
+  "latin": "Ritus",
+  "english": "Ritual",
+  "summary": "A near-black ritual for marketing pages: one red, square edges, and Latin incantations in blackletter that refuse to sit still."
+ },
+ {
+  "name": "Grimoire",
+  "themes": [
+   {
+    "id": "grimoire",
+    "name": "Grimoire (night)"
+   },
+   {
+    "id": "vellum",
+    "name": "Vellum (day)"
+   }
+  ],
+  "colors": [
+   {
+    "n": "surface-void",
+    "u": "The ground behind everything: page background, gutters, the area outside the book. Body copy in `ink` and `ink-muted` reads on it in both themes.",
+    "v": {
+     "grimoire": "#110c0d",
+     "vellum": "#e3d1ae"
+    }
+   },
+   {
+    "n": "surface",
+    "u": "Default reading surface (leather by night, vellum by day). Cards that sit flush, panels, the body of a page.",
+    "v": {
+     "grimoire": "#1b1314",
+     "vellum": "#efe1c3"
+    }
+   },
+   {
+    "n": "surface-raised",
+    "u": "Lifted objects: cards, modals, toasts, menus, inputs. Pair with `shadow-raised` or `shadow-float`.",
+    "v": {
+     "grimoire": "#251a1b",
+     "vellum": "#f6ebd3"
+    }
+   },
+   {
+    "n": "surface-sunken",
+    "u": "Wells and tracks: input fields at rest, progress tracks, toggle tracks, code. Use `ink` or `ink-muted` on it, never `ink-faint` in vellum.",
+    "v": {
+     "grimoire": "#0b0708",
+     "vellum": "#dcc8a1"
+    }
+   },
+   {
+    "n": "line",
+    "u": "Quiet hairlines: dividers inside cards, table rules, the inner rule of the double border. Decorative only, never the only edge of a control.",
+    "v": {
+     "grimoire": "#3e2d2b",
+     "vellum": "#c2a77b"
+    }
+   },
+   {
+    "n": "line-gilt",
+    "u": "Gilded rule: control borders, card frames, the outer edge of the double border. Meets 3:1 on surface and surface-raised as a control edge in both themes (grimoire 3.5:1 on raised).",
+    "v": {
+     "grimoire": "#8c6c34",
+     "vellum": "#8e6a22"
+    }
+   },
+   {
+    "n": "ink",
+    "u": "Primary text and icons on every surface and soft status fill.",
+    "v": {
+     "grimoire": "#f0e5d3",
+     "vellum": "#2b1a10"
+    }
+   },
+   {
+    "n": "ink-muted",
+    "u": "Secondary text, helper text, metadata, inactive tabs. On every surface.",
+    "v": {
+     "grimoire": "#b8a690",
+     "vellum": "#5b4330"
+    }
+   },
+   {
+    "n": "ink-faint",
+    "u": "Placeholders and tertiary captions on surface, surface-raised and surface-void. Not on surface-sunken in vellum (4.2:1).",
+    "v": {
+     "grimoire": "#948370",
+     "vellum": "#6f5640"
+    }
+   },
+   {
+    "n": "crimson",
+    "u": "The brand's blood-ink. Fill for primary buttons, the active tab ribbon, toggle-on tracks, wax seals. Text on it is `on-crimson`.",
+    "v": {
+     "grimoire": "#a51d2b",
+     "vellum": "#8f1623"
+    }
+   },
+   {
+    "n": "crimson-bright",
+    "u": "Hover and pressed fill of crimson elements, and the hot core of ember particles.",
+    "v": {
+     "grimoire": "#c42a39",
+     "vellum": "#a8202f"
+    }
+   },
+   {
+    "n": "crimson-text",
+    "u": "Crimson as text or icon: drop caps, emphasized links, required markers, on any surface.",
+    "v": {
+     "grimoire": "#ec7079",
+     "vellum": "#8f1623"
+    }
+   },
+   {
+    "n": "on-crimson",
+    "u": "Text and icons on `crimson` and `crimson-bright` fills.",
+    "v": {
+     "grimoire": "#fbefe0",
+     "vellum": "#f8eed8"
+    }
+   },
+   {
+    "n": "gold",
+    "u": "Gold leaf as a fill or stroke: filigree corners, sigils, toggle knobs, progress glints, gilt dividers. Text on a gold fill is `on-gold`.",
+    "v": {
+     "grimoire": "#d4a54a",
+     "vellum": "#b0832a"
+    }
+   },
+   {
+    "n": "gold-bright",
+    "u": "Highlights only: the shimmer sweep, the hot edge of a burning toast, sparkle in a cast effect. Never text.",
+    "v": {
+     "grimoire": "#f2d283",
+     "vellum": "#d9ac4c"
+    }
+   },
+   {
+    "n": "gold-text",
+    "u": "Gold as text: eyebrows, inscriptions, active labels, links in body copy, on surface and surface-raised.",
+    "v": {
+     "grimoire": "#d4a54a",
+     "vellum": "#6c4b0d"
+    }
+   },
+   {
+    "n": "on-gold",
+    "u": "Text and icons on `gold` fills.",
+    "v": {
+     "grimoire": "#1a1108",
+     "vellum": "#22150a"
+    }
+   },
+   {
+    "n": "focus-ring",
+    "u": "Keyboard focus. A solid 2px ring with a 2px gap in the surface colour; at least 4:1 on every surface in both themes.",
+    "v": {
+     "grimoire": "#f2d283",
+     "vellum": "#6c4b0d"
+    }
+   },
+   {
+    "n": "success",
+    "u": "Verdigris. Text and icons for a spell that took: confirmations, completed steps. Always paired with a word or icon. On surfaces and `success-soft`.",
+    "v": {
+     "grimoire": "#5cc1ae",
+     "vellum": "#175a4f"
+    }
+   },
+   {
+    "n": "success-soft",
+    "u": "Background of success alerts and toasts.",
+    "v": {
+     "grimoire": "#12302b",
+     "vellum": "#cfe0cf"
+    }
+   },
+   {
+    "n": "warning",
+    "u": "Amber. Text and icons for caution. Always paired with a word or icon. On surfaces and `warning-soft`.",
+    "v": {
+     "grimoire": "#e6b65a",
+     "vellum": "#6e4b08"
+    }
+   },
+   {
+    "n": "warning-soft",
+    "u": "Background of warning alerts and toasts.",
+    "v": {
+     "grimoire": "#33270e",
+     "vellum": "#ecd9a8"
+    }
+   },
+   {
+    "n": "danger",
+    "u": "Hexfire. Errors and destructive outcomes; distinct from brand crimson by hue toward orange and by its icon. On surface, surface-raised and `danger-soft`.",
+    "v": {
+     "grimoire": "#ff8a70",
+     "vellum": "#a12e1c"
+    }
+   },
+   {
+    "n": "danger-soft",
+    "u": "Background of error alerts, toasts and invalid inputs.",
+    "v": {
+     "grimoire": "#3a1414",
+     "vellum": "#ecc8b6"
+    }
+   },
+   {
+    "n": "info",
+    "u": "Astral blue. Text and icons for neutral notices and tips. On surfaces and `info-soft`.",
+    "v": {
+     "grimoire": "#93b6e8",
+     "vellum": "#2b4f86"
+    }
+   },
+   {
+    "n": "info-soft",
+    "u": "Background of info alerts and toasts.",
+    "v": {
+     "grimoire": "#16233a",
+     "vellum": "#cdd6e0"
+    }
+   },
+   {
+    "n": "gold-deep",
+    "u": "Shaded side of gold metal: the lower edge of corner mounts and button finials. Never text.",
+    "v": {
+     "grimoire": "#8a6224",
+     "vellum": "#6c4b0d"
+    }
+   },
+   {
+    "n": "holder-shade",
+    "u": "The hard shadow a metal corner mount or a lifted page casts onto the paper.",
+    "v": {
+     "grimoire": "rgba(0, 0, 0, 0.55)",
+     "vellum": "rgba(60, 35, 12, 0.32)"
+    }
+   },
+   {
+    "n": "arc-core",
+    "u": "Bright core of a crackling arc of power (button charge, casts, the rune wall).",
+    "v": {
+     "grimoire": "#fff2cf",
+     "vellum": "#a8202f"
+    }
+   },
+   {
+    "n": "arc-glow",
+    "u": "The thin glow around an arc's core. Only ever drawn around arcs, never as a halo behind text.",
+    "v": {
+     "grimoire": "rgba(242, 210, 131, 0.6)",
+     "vellum": "rgba(168, 32, 47, 0.32)"
+    }
+   },
+   {
+    "n": "rune",
+    "u": "Resting runes on the rune wall and rune strips, drawn at partial strength.",
+    "v": {
+     "grimoire": "#d4a54a",
+     "vellum": "#6c4b0d"
+    }
+   },
+   {
+    "n": "rune-flare",
+    "u": "A rune at the moment it flares, or where an arc touches it.",
+    "v": {
+     "grimoire": "#f2d283",
+     "vellum": "#a8202f"
+    }
+   },
+   {
+    "n": "rune-seam",
+    "u": "Seams between the carved blocks of the rune wall.",
+    "v": {
+     "grimoire": "rgba(212, 165, 74, 0.12)",
+     "vellum": "rgba(108, 75, 13, 0.16)"
+    }
+   },
+   {
+    "n": "watermark",
+    "u": "The faint arcane diagram printed into the page background.",
+    "v": {
+     "grimoire": "rgba(212, 165, 74, 0.07)",
+     "vellum": "rgba(143, 22, 35, 0.07)"
+    }
+   },
+   {
+    "n": "glow-gold",
+    "u": "Soft light around gold arcs and the toast's burning edge. Never a halo behind text or controls.",
+    "v": {
+     "grimoire": "rgba(212, 165, 74, 0.45)",
+     "vellum": "rgba(176, 131, 42, 0.35)"
+    }
+   },
+   {
+    "n": "glow-crimson",
+    "u": "Soft light around danger arcs on failed casts and the toast's burning edge.",
+    "v": {
+     "grimoire": "rgba(197, 42, 57, 0.5)",
+     "vellum": "rgba(143, 22, 35, 0.3)"
+    }
+   },
+   {
+    "n": "stain",
+    "u": "Ageing on the page: the soft stains in the body background and empty states.",
+    "v": {
+     "grimoire": "rgba(165, 29, 43, 0.1)",
+     "vellum": "rgba(140, 95, 30, 0.16)"
+    }
+   },
+   {
+    "n": "scrim",
+    "u": "Dims the page behind a modal.",
+    "v": {
+     "grimoire": "rgba(5, 3, 3, 0.72)",
+     "vellum": "rgba(43, 26, 16, 0.55)"
+    }
+   }
+  ],
+  "shadows": [
+   {
+    "n": "shadow-raised",
+    "v": {
+     "grimoire": "inset 0 1px 0 rgba(242, 210, 131, 0.06), 0 6px 18px rgba(0, 0, 0, 0.55)",
+     "vellum": "inset 0 1px 0 rgba(255, 250, 235, 0.6), 0 4px 14px rgba(70, 40, 15, 0.18)"
+    }
+   },
+   {
+    "n": "shadow-float",
+    "v": {
+     "grimoire": "0 24px 60px rgba(0, 0, 0, 0.7), 0 2px 6px rgba(0, 0, 0, 0.6)",
+     "vellum": "0 22px 50px rgba(60, 35, 12, 0.32), 0 2px 6px rgba(60, 35, 12, 0.2)"
+    }
+   }
+  ],
+  "families": {
+   "display": "\"Cinzel\", \"Trajan Pro\", \"Times New Roman\", serif",
+   "serif": "\"Cormorant Garamond\", \"Garamond\", \"Georgia\", serif",
+   "sans": "\"Manrope\", \"Segoe UI\", system-ui, sans-serif",
+   "rune": "\"Noto Sans Runic\", \"Segoe UI Historic\", serif"
+  },
+  "groups": [
+   {
+    "name": "Display",
+    "family": "display",
+    "styles": [
+     {
+      "name": "display-xl",
+      "fontSize": "56px",
+      "lineHeight": "60px",
+      "fontWeight": 600,
+      "letterSpacing": "0.02em",
+      "sample": "The Crimson Codex",
+      "usage": "One per page: the title of a tome, the hero line."
+     },
+     {
+      "name": "display-lg",
+      "fontSize": "40px",
+      "lineHeight": "46px",
+      "fontWeight": 600,
+      "letterSpacing": "0.02em",
+      "sample": "Chapter of Wards",
+      "usage": "Section titles and modal titles on wide screens."
+     },
+     {
+      "name": "eyebrow",
+      "fontSize": "12px",
+      "lineHeight": "16px",
+      "fontWeight": 600,
+      "letterSpacing": "0.18em",
+      "sample": "SCHOOL OF ABJURATION",
+      "usage": "Uppercase labels above headings, field labels, tab labels. Set in `gold-text` or `ink-muted`."
+     }
+    ]
+   },
+   {
+    "name": "Headings",
+    "family": "serif",
+    "styles": [
+     {
+      "name": "heading-lg",
+      "fontSize": "32px",
+      "lineHeight": "38px",
+      "fontWeight": 600,
+      "sample": "Binding a familiar",
+      "usage": "Page headings in sentence case."
+     },
+     {
+      "name": "heading-md",
+      "fontSize": "24px",
+      "lineHeight": "30px",
+      "fontWeight": 600,
+      "sample": "Components of the rite",
+      "usage": "Card titles, modal titles, empty-state titles."
+     },
+     {
+      "name": "heading-sm",
+      "fontSize": "20px",
+      "lineHeight": "26px",
+      "fontWeight": 600,
+      "sample": "Material reagents",
+      "usage": "Accordion chapter titles and sub-sections."
+     },
+     {
+      "name": "lede",
+      "fontSize": "20px",
+      "lineHeight": "30px",
+      "fontWeight": 400,
+      "fontStyle": "italic",
+      "sample": "Speak the word slowly, and the ink will answer.",
+      "usage": "Opening paragraph and quoted incantations."
+     }
+    ]
+   },
+   {
+    "name": "Text",
+    "family": "sans",
+    "styles": [
+     {
+      "name": "body-lg",
+      "fontSize": "17px",
+      "lineHeight": "27px",
+      "fontWeight": 400,
+      "sample": "Each ward lasts until the next new moon.",
+      "usage": "Long-form reading."
+     },
+     {
+      "name": "body",
+      "fontSize": "15px",
+      "lineHeight": "24px",
+      "fontWeight": 400,
+      "sample": "Prepare three measures of salt before you begin.",
+      "usage": "Default UI and body copy."
+     },
+     {
+      "name": "body-sm",
+      "fontSize": "13px",
+      "lineHeight": "20px",
+      "fontWeight": 400,
+      "sample": "Last inscribed 3 nights ago",
+      "usage": "Helper text, metadata, toast body."
+     },
+     {
+      "name": "label",
+      "fontSize": "13px",
+      "lineHeight": "16px",
+      "fontWeight": 600,
+      "letterSpacing": "0.04em",
+      "sample": "Cast spell",
+      "usage": "Buttons, toggles, checkbox and radio labels."
+     },
+     {
+      "name": "caption",
+      "fontSize": "12px",
+      "lineHeight": "16px",
+      "fontWeight": 500,
+      "sample": "Requires a focus component",
+      "usage": "Fine print and counts. In `ink-muted`."
+     }
+    ]
+   },
+   {
+    "name": "Runes",
+    "family": "rune",
+    "styles": [
+     {
+      "name": "rune",
+      "fontSize": "16px",
+      "lineHeight": "20px",
+      "fontWeight": 400,
+      "letterSpacing": "0.3em",
+      "sample": "ᚠᚢᚦᚨᚱᚲ ᚷᚹᚺᚾᛁ",
+      "usage": "Decorative inscriptions and sigils only. Always `aria-hidden`; never carries meaning."
+     }
+    ]
+   }
+  ],
+  "spacing": [
+   {
+    "name": "space-1",
+    "value": "4px",
+    "usage": "Icon-to-text gaps, between a check and its label."
+   },
+   {
+    "name": "space-2",
+    "value": "8px",
+    "usage": "Inside dense controls; between stacked label and field."
+   },
+   {
+    "name": "space-3",
+    "value": "12px",
+    "usage": "Button horizontal padding (small), between fields in a row."
+   },
+   {
+    "name": "space-4",
+    "value": "16px",
+    "usage": "Default gap between controls; toast and alert padding."
+   },
+   {
+    "name": "space-5",
+    "value": "24px",
+    "usage": "Card padding; gap between form groups."
+   },
+   {
+    "name": "space-6",
+    "value": "32px",
+    "usage": "Modal padding; between card sections."
+   },
+   {
+    "name": "space-7",
+    "value": "48px",
+    "usage": "Between page sections."
+   },
+   {
+    "name": "space-8",
+    "value": "64px",
+    "usage": "Hero breathing room; empty-state padding."
+   }
+  ],
+  "radius": [
+   {
+    "name": "radius-xs",
+    "value": "2px",
+    "usage": "Checkboxes, inputs, buttons: corners of a bound book, nearly square."
+   },
+   {
+    "name": "radius-sm",
+    "value": "4px",
+    "usage": "Cards, toasts, alerts, modals."
+   },
+   {
+    "name": "radius-md",
+    "value": "8px",
+    "usage": "Large panels and the page-turn book."
+   },
+   {
+    "name": "radius-seal",
+    "value": "9999px",
+    "usage": "Wax seals, toggle tracks and knobs, radio buttons, sigil cores."
+   }
+  ],
+  "slug": "grimoire",
+  "latin": "Liber umbrarum",
+  "english": "Book of shadows",
+  "summary": "A working spellbook: tooled leather and gold leaf by night, aged vellum by day, crimson blood-ink for whatever matters."
+ },
+ {
+  "name": "Obsidian",
+  "themes": [
+   {
+    "id": "dark",
+    "name": "Dark (AMOLED)"
+   },
+   {
+    "id": "light",
+    "name": "Light"
+   }
+  ],
+  "colors": [
+   {
+    "n": "bg",
+    "u": "Page background. Pure black in dark (AMOLED) — never tint it. Everything else sits on top.",
+    "v": {
+     "dark": "#000000",
+     "light": "#fafafa"
+    }
+   },
+   {
+    "n": "surface-1",
+    "u": "Cards, panels, sidebar, table body. The first step up from bg.",
+    "v": {
+     "dark": "#0a0a0a",
+     "light": "#ffffff"
+    }
+   },
+   {
+    "n": "surface-2",
+    "u": "Raised inside a card: inputs, secondary buttons, table header, hover on surface-1.",
+    "v": {
+     "dark": "#141414",
+     "light": "#f2f2f3"
+    }
+   },
+   {
+    "n": "surface-3",
+    "u": "Pressed/active fills, hover on surface-2, progress tracks.",
+    "v": {
+     "dark": "#1f1f1f",
+     "light": "#e7e7e9"
+    }
+   },
+   {
+    "n": "border",
+    "u": "Hairline dividers: table rows, card edges where grey steps aren't enough, input outlines.",
+    "v": {
+     "dark": "#262626",
+     "light": "#e3e3e6"
+    }
+   },
+   {
+    "n": "border-strong",
+    "u": "Hovered input outlines, emphasised dividers. Meets 3:1 against bg only in light; decorative in dark.",
+    "v": {
+     "dark": "#3a3a3a",
+     "light": "#c9c9ce"
+    }
+   },
+   {
+    "n": "text",
+    "u": "Primary text and numbers on bg, surface-1, surface-2, surface-3.",
+    "v": {
+     "dark": "#f5f5f5",
+     "light": "#0a0a0a"
+    }
+   },
+   {
+    "n": "text-muted",
+    "u": "Secondary text, labels, table headers on bg and every surface.",
+    "v": {
+     "dark": "#a3a3a3",
+     "light": "#52525b"
+    }
+   },
+   {
+    "n": "text-subtle",
+    "u": "Tertiary text: timestamps, hints, units, placeholders. Legible on bg and every surface; don't go lighter.",
+    "v": {
+     "dark": "#8a8a8a",
+     "light": "#62626a"
+    }
+   },
+   {
+    "n": "accent",
+    "u": "Obsidian's one hue: primary buttons, active nav, selected tabs, links, chart series 1. Text in accent reads on bg, surface-1 and surface-2.",
+    "v": {
+     "dark": "#2bd4f5",
+     "light": "#076c95"
+    }
+   },
+   {
+    "n": "accent-hover",
+    "u": "Hover state of accent fills and links.",
+    "v": {
+     "dark": "#6fe2f9",
+     "light": "#065f84"
+    }
+   },
+   {
+    "n": "accent-muted",
+    "u": "Tinted fill behind active nav items, selected rows, accent badges. Put accent or text on it, never on-accent.",
+    "v": {
+     "dark": "#2bd4f524",
+     "light": "#076c951a"
+    }
+   },
+   {
+    "n": "on-accent",
+    "u": "Text and icons on an accent or accent-hover fill.",
+    "v": {
+     "dark": "#000000",
+     "light": "#ffffff"
+    }
+   },
+   {
+    "n": "focus-ring",
+    "u": "Keyboard focus: 2px solid outline, 2px offset. Accent clears 3:1 on every surface in both themes.",
+    "v": {
+     "dark": "#2bd4f5",
+     "light": "#076c95"
+    }
+   },
+   {
+    "n": "success",
+    "u": "Healthy / online / positive delta. Text and dots on bg and every surface. Always paired with a word.",
+    "v": {
+     "dark": "#46d98a",
+     "light": "#126c36"
+    }
+   },
+   {
+    "n": "success-muted",
+    "u": "Fill behind success badges.",
+    "v": {
+     "dark": "#46d98a1f",
+     "light": "#126c361a"
+    }
+   },
+   {
+    "n": "warning",
+    "u": "Degraded / approaching limit. Text and dots on bg and every surface. Always paired with a word.",
+    "v": {
+     "dark": "#f2b544",
+     "light": "#8f5a00"
+    }
+   },
+   {
+    "n": "warning-muted",
+    "u": "Fill behind warning badges.",
+    "v": {
+     "dark": "#f2b5441f",
+     "light": "#8f5a001a"
+    }
+   },
+   {
+    "n": "danger",
+    "u": "Error / offline / negative delta / destructive buttons. Text on bg and every surface. Always paired with a word.",
+    "v": {
+     "dark": "#ff6b6b",
+     "light": "#c42b2b"
+    }
+   },
+   {
+    "n": "danger-muted",
+    "u": "Fill behind danger badges and the danger button.",
+    "v": {
+     "dark": "#ff6b6b1f",
+     "light": "#c42b2b1a"
+    }
+   },
+   {
+    "n": "chart-1",
+    "u": "Chart series 1 — the series that matters most.",
+    "v": {
+     "dark": "#2bd4f5",
+     "light": "#076c95"
+    }
+   },
+   {
+    "n": "chart-2",
+    "u": "Chart series 2.",
+    "v": {
+     "dark": "#f2b544",
+     "light": "#a86800"
+    }
+   },
+   {
+    "n": "chart-3",
+    "u": "Chart series 3.",
+    "v": {
+     "dark": "#b39dff",
+     "light": "#6a4fd1"
+    }
+   },
+   {
+    "n": "chart-4",
+    "u": "Chart series 4.",
+    "v": {
+     "dark": "#ff8fb1",
+     "light": "#c2386a"
+    }
+   },
+   {
+    "n": "chart-5",
+    "u": "Chart series 5. Beyond five series, group the rest as 'Other' in text-subtle.",
+    "v": {
+     "dark": "#9ad66b",
+     "light": "#3f7f1e"
+    }
+   }
+  ],
+  "shadows": [
+   {
+    "n": "shadow-raised",
+    "v": {
+     "dark": "0 0 0 1px #1f1f1f, inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 4px 20px rgba(255, 255, 255, 0.035)",
+     "light": "0 0 0 1px #e3e3e6, 0 1px 2px rgba(15, 15, 20, 0.05), 0 4px 12px rgba(15, 15, 20, 0.06)"
+    }
+   },
+   {
+    "n": "shadow-overlay",
+    "v": {
+     "dark": "0 0 0 1px #3a3a3a, inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 16px 48px rgba(255, 255, 255, 0.08)",
+     "light": "0 0 0 1px #e3e3e6, 0 12px 32px rgba(15, 15, 20, 0.12)"
+    }
+   },
+   {
+    "n": "shadow-sidebar",
+    "v": {
+     "dark": "0 0 0 1px #333333, 2px 0 0 -1px #4a4a4a, 10px 0 36px rgba(255, 255, 255, 0.07)",
+     "light": "0 0 0 1px #e3e3e6, 6px 0 20px rgba(15, 15, 20, 0.10)"
+    }
+   }
+  ],
+  "families": {
+   "sans": "Geist, \"Geist Fallback\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+   "mono": "\"Geist Mono\", ui-monospace, \"SF Mono\", Menlo, Consolas, monospace"
+  },
+  "groups": [
+   {
+    "name": "Display",
+    "family": "sans",
+    "styles": [
+     {
+      "name": "text-display",
+      "fontSize": "32px",
+      "lineHeight": "38px",
+      "fontWeight": 600,
+      "letterSpacing": "-0.02em",
+      "sample": "Homelab overview",
+      "usage": "One per page at most: the page title on a dashboard."
+     },
+     {
+      "name": "text-numeric",
+      "fontSize": "28px",
+      "lineHeight": "32px",
+      "fontWeight": 600,
+      "letterSpacing": "-0.01em",
+      "sample": "$4,820.00",
+      "usage": "The big number in a StatTile. Always tabular figures."
+     }
+    ]
+   },
+   {
+    "name": "Headings",
+    "family": "sans",
+    "styles": [
+     {
+      "name": "text-title-1",
+      "fontSize": "24px",
+      "lineHeight": "32px",
+      "fontWeight": 600,
+      "letterSpacing": "-0.015em",
+      "sample": "Rent planning 2027",
+      "usage": "Page or view heading."
+     },
+     {
+      "name": "text-title-2",
+      "fontSize": "18px",
+      "lineHeight": "26px",
+      "fontWeight": 600,
+      "letterSpacing": "-0.01em",
+      "sample": "Monthly expenses",
+      "usage": "Section heading inside a page."
+     },
+     {
+      "name": "text-title-3",
+      "fontSize": "15px",
+      "lineHeight": "22px",
+      "fontWeight": 600,
+      "sample": "Containers",
+      "usage": "Card titles."
+     }
+    ]
+   },
+   {
+    "name": "Text",
+    "family": "sans",
+    "styles": [
+     {
+      "name": "text-body",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "fontWeight": 400,
+      "sample": "All eight rooms are let through August.",
+      "usage": "Default UI and table text."
+     },
+     {
+      "name": "text-body-strong",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "fontWeight": 500,
+      "sample": "orion-1",
+      "usage": "Emphasis in body: names, primary cell in a row, button labels."
+     },
+     {
+      "name": "text-small",
+      "fontSize": "13px",
+      "lineHeight": "18px",
+      "fontWeight": 400,
+      "sample": "Updated 2 min ago",
+      "usage": "Hints, meta, dense tables, small buttons."
+     },
+     {
+      "name": "text-label",
+      "fontSize": "12px",
+      "lineHeight": "16px",
+      "fontWeight": 500,
+      "letterSpacing": "0.02em",
+      "sample": "CPU LOAD",
+      "usage": "Stat labels, sidebar section titles, table headers. Uppercase only here."
+     }
+    ]
+   },
+   {
+    "name": "Mono",
+    "family": "mono",
+    "styles": [
+     {
+      "name": "text-mono",
+      "fontSize": "13px",
+      "lineHeight": "20px",
+      "fontWeight": 400,
+      "sample": "10.0.0.12:32400",
+      "usage": "IPs, hostnames, IDs, code, log lines."
+     }
+    ]
+   }
+  ],
+  "spacing": [
+   {
+    "name": "space-1",
+    "value": "4px",
+    "usage": "Icon-to-label gap, badge padding."
+   },
+   {
+    "name": "space-2",
+    "value": "8px",
+    "usage": "Gap between buttons, inside compact controls."
+   },
+   {
+    "name": "space-3",
+    "value": "12px",
+    "usage": "Control horizontal padding, table cell padding."
+   },
+   {
+    "name": "space-4",
+    "value": "16px",
+    "usage": "Card padding, grid gap between tiles."
+   },
+   {
+    "name": "space-5",
+    "value": "20px",
+    "usage": "Card header to body."
+   },
+   {
+    "name": "space-6",
+    "value": "24px",
+    "usage": "Gap between cards, page gutter."
+   },
+   {
+    "name": "space-8",
+    "value": "32px",
+    "usage": "Between page sections."
+   },
+   {
+    "name": "space-12",
+    "value": "48px",
+    "usage": "Top of page to title on wide screens."
+   }
+  ],
+  "radius": [
+   {
+    "name": "radius-sm",
+    "value": "4px",
+    "usage": "Badges, checkboxes, small tags, tiles inside dense grids."
+   },
+   {
+    "name": "radius-md",
+    "value": "6px",
+    "usage": "Buttons, inputs, tabs, nav items."
+   },
+   {
+    "name": "radius-lg",
+    "value": "8px",
+    "usage": "Cards, panels, tables, popovers."
+   },
+   {
+    "name": "radius-full",
+    "value": "9999px",
+    "usage": "Status dots, progress tracks, count pills."
+   }
+  ],
+  "slug": "obsidian",
+  "latin": "Lapis niger",
+  "english": "Black stone",
+  "summary": "Dark-first and quiet, for dashboards and data tools: true black, grey steps of lift, and one cyan that does all the pointing."
+ },
+ {
+  "name": "Tactile",
+  "themes": [
+   {
+    "id": "light",
+    "name": "Light"
+   },
+   {
+    "id": "dark",
+    "name": "Dark"
+   }
+  ],
+  "colors": [
+   {
+    "n": "surface",
+    "u": "The one material. Page background AND the fill of every raised or inset element — neumorphism only works when objects are extruded from the same color as the ground.",
+    "v": {
+     "light": "#e6ebf1",
+     "dark": "#262a31"
+    }
+   },
+   {
+    "n": "surface-sunken",
+    "u": "Floor of inset wells: text fields, switch tracks, progress tracks. A half-step darker so a well reads as a well even where shadows are lost (high-contrast mode, print, screenshots).",
+    "v": {
+     "light": "#dce2ea",
+     "dark": "#1f2228"
+    }
+   },
+   {
+    "n": "highlight",
+    "u": "The light-side shadow color (top-left). Only used inside shadow tokens; never as a fill.",
+    "v": {
+     "light": "#ffffff",
+     "dark": "#2f333b"
+    }
+   },
+   {
+    "n": "shade",
+    "u": "The dark-side shadow color (bottom-right). Only used inside shadow tokens; never as a fill.",
+    "v": {
+     "light": "#b3bdcb",
+     "dark": "#0e1013"
+    }
+   },
+   {
+    "n": "ink",
+    "u": "Primary text and icons on surface (10.9:1 light, 11.8:1 dark).",
+    "v": {
+     "light": "#2a3140",
+     "dark": "#e6e9ee"
+    }
+   },
+   {
+    "n": "ink-muted",
+    "u": "Secondary text, labels, captions on surface or surface-sunken (≥4.8:1 in both themes).",
+    "v": {
+     "light": "#566072",
+     "dark": "#a7afbc"
+    }
+   },
+   {
+    "n": "ink-faint",
+    "u": "Disabled text, placeholder hints, decorative glyphs. 3:1 — never for content a person must read to proceed.",
+    "v": {
+     "light": "#7d8797",
+     "dark": "#6f7887"
+    }
+   },
+   {
+    "n": "edge",
+    "u": "Decorative 1px rim on raised elements; softens the silhouette. Not a boundary on its own.",
+    "v": {
+     "light": "#d3dae3",
+     "dark": "#2a2e35"
+    }
+   },
+   {
+    "n": "edge-strong",
+    "u": "The accessible boundary (3:1 on surface): rims of text fields, switch tracks and any control whose shape would otherwise be told only by shadow.",
+    "v": {
+     "light": "#7d8797",
+     "dark": "#6f7887"
+    }
+   },
+   {
+    "n": "accent",
+    "u": "The single hue. Primary action fill, 'on' state of switches, slider fill, selected segment text. One accent-filled control per view.",
+    "v": {
+     "light": "#0d6e62",
+     "dark": "#5fd4c0"
+    }
+   },
+   {
+    "n": "on-accent",
+    "u": "Text and icons on accent (6.1:1 light, 9.4:1 dark).",
+    "v": {
+     "light": "#ffffff",
+     "dark": "#0b201d"
+    }
+   },
+   {
+    "n": "focus",
+    "u": "Keyboard focus ring: 2px outline, 3px offset. Always visible — shadows never carry focus.",
+    "v": {
+     "light": "#0d6e62",
+     "dark": "#5fd4c0"
+    }
+   },
+   {
+    "n": "danger",
+    "u": "Error text and the rim of an invalid field (≥5.4:1). Paired with an icon or message, never color alone.",
+    "v": {
+     "light": "#b42318",
+     "dark": "#ff8f80"
+    }
+   },
+   {
+    "n": "success",
+    "u": "Confirmation text and completed-progress states (≥5.4:1).",
+    "v": {
+     "light": "#1d6b35",
+     "dark": "#74d68f"
+    }
+   },
+   {
+    "n": "glow-violet",
+    "u": "Active-glow ink, violet tone: label, rim and halo of a lit Pad or toggled IconButton. ≥5:1 on its own fill, including the glow hotspot.",
+    "v": {
+     "light": "#6a2a8a",
+     "dark": "#e3acf7"
+    }
+   },
+   {
+    "n": "glow-violet-fill",
+    "u": "Active-glow body, violet tone: the tinted fill a lit Pad lights up with.",
+    "v": {
+     "light": "#e8daf2",
+     "dark": "#46265a"
+    }
+   },
+   {
+    "n": "glow-blue",
+    "u": "Active-glow ink, blue tone.",
+    "v": {
+     "light": "#1f4f9a",
+     "dark": "#a3c4ff"
+    }
+   },
+   {
+    "n": "glow-blue-fill",
+    "u": "Active-glow body, blue tone.",
+    "v": {
+     "light": "#d8e3f7",
+     "dark": "#20365e"
+    }
+   },
+   {
+    "n": "glow-teal",
+    "u": "Active-glow ink, teal tone.",
+    "v": {
+     "light": "#0f5f63",
+     "dark": "#8fe6ea"
+    }
+   },
+   {
+    "n": "glow-teal-fill",
+    "u": "Active-glow body, teal tone.",
+    "v": {
+     "light": "#d3ecec",
+     "dark": "#1b454b"
+    }
+   },
+   {
+    "n": "glow-yellow",
+    "u": "Active-glow ink, yellow tone.",
+    "v": {
+     "light": "#5f5300",
+     "dark": "#f2ea6a"
+    }
+   },
+   {
+    "n": "glow-yellow-fill",
+    "u": "Active-glow body, yellow tone.",
+    "v": {
+     "light": "#efeacb",
+     "dark": "#43431c"
+    }
+   },
+   {
+    "n": "glow-green",
+    "u": "Active-glow ink, green tone. Also the default glow for navigation icons (the lit arrow on a D-pad).",
+    "v": {
+     "light": "#245c24",
+     "dark": "#a8f0a0"
+    }
+   },
+   {
+    "n": "glow-green-fill",
+    "u": "Active-glow body, green tone.",
+    "v": {
+     "light": "#d9ecd5",
+     "dark": "#284629"
+    }
+   }
+  ],
+  "shadows": [
+   {
+    "n": "raised-sm",
+    "v": {
+     "light": "4px 4px 8px #b3bdcb, -4px -4px 8px #ffffff",
+     "dark": "inset 1px 1px 0 rgba(255, 255, 255, 0.06), 5px 8px 14px rgba(0, 0, 0, 0.55), -3px -3px 8px rgba(255, 255, 255, 0.03)"
+    }
+   },
+   {
+    "n": "raised-md",
+    "v": {
+     "light": "8px 8px 16px #b3bdcb, -8px -8px 16px #ffffff",
+     "dark": "inset 1px 1px 0 rgba(255, 255, 255, 0.06), 8px 12px 24px rgba(0, 0, 0, 0.6), -5px -5px 14px rgba(255, 255, 255, 0.03)"
+    }
+   },
+   {
+    "n": "raised-lg",
+    "v": {
+     "light": "14px 14px 30px #b3bdcb, -14px -14px 30px #ffffff",
+     "dark": "inset 1px 1px 0 rgba(255, 255, 255, 0.07), 14px 20px 40px rgba(0, 0, 0, 0.65), -8px -8px 22px rgba(255, 255, 255, 0.03)"
+    }
+   },
+   {
+    "n": "inset-sm",
+    "v": {
+     "light": "inset 3px 3px 6px #b3bdcb, inset -3px -3px 6px #ffffff",
+     "dark": "inset 4px 5px 10px rgba(0, 0, 0, 0.6), inset -2px -2px 6px rgba(255, 255, 255, 0.04)"
+    }
+   },
+   {
+    "n": "inset-md",
+    "v": {
+     "light": "inset 5px 5px 10px #b3bdcb, inset -5px -5px 10px #ffffff",
+     "dark": "inset 6px 8px 14px rgba(0, 0, 0, 0.6), inset -3px -3px 8px rgba(255, 255, 255, 0.04)"
+    }
+   },
+   {
+    "n": "flat",
+    "v": {
+     "light": "none",
+     "dark": "none"
+    }
+   }
+  ],
+  "families": {
+   "sans": "\"Manrope\", ui-rounded, system-ui, -apple-system, \"Segoe UI\", sans-serif"
+  },
+  "groups": [
+   {
+    "name": "Display",
+    "family": "sans",
+    "styles": [
+     {
+      "name": "display",
+      "fontSize": "48px",
+      "lineHeight": "52px",
+      "fontWeight": 800,
+      "letterSpacing": "-0.02em",
+      "sample": "Press softly",
+      "usage": "Hero numbers and page titles in marketing or dashboards. Once per view."
+     },
+     {
+      "name": "h1",
+      "fontSize": "32px",
+      "lineHeight": "38px",
+      "fontWeight": 700,
+      "letterSpacing": "-0.01em",
+      "sample": "Living room",
+      "usage": "Page title."
+     },
+     {
+      "name": "h2",
+      "fontSize": "24px",
+      "lineHeight": "30px",
+      "fontWeight": 700,
+      "sample": "Climate",
+      "usage": "Section or card title."
+     },
+     {
+      "name": "h3",
+      "fontSize": "18px",
+      "lineHeight": "24px",
+      "fontWeight": 600,
+      "sample": "Thermostat schedule",
+      "usage": "Sub-section, panel header."
+     }
+    ]
+   },
+   {
+    "name": "Text",
+    "family": "sans",
+    "styles": [
+     {
+      "name": "body",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "fontWeight": 400,
+      "sample": "Shadows describe shape; text and edges describe meaning.",
+      "usage": "Default reading text."
+     },
+     {
+      "name": "body-sm",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "fontWeight": 400,
+      "sample": "Updated two minutes ago",
+      "usage": "Supporting copy, helper text under fields."
+     },
+     {
+      "name": "label",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "fontWeight": 600,
+      "letterSpacing": "0.01em",
+      "sample": "Save changes",
+      "usage": "Buttons, field labels, segment labels."
+     },
+     {
+      "name": "caption",
+      "fontSize": "12px",
+      "lineHeight": "16px",
+      "fontWeight": 600,
+      "letterSpacing": "0.06em",
+      "sample": "TEMPERATURE",
+      "usage": "Overlines and meter captions, uppercase. Muted ink only."
+     }
+    ]
+   }
+  ],
+  "spacing": [
+   {
+    "name": "space-1",
+    "value": "4px",
+    "usage": "Icon-to-label gap inside tight controls."
+   },
+   {
+    "name": "space-2",
+    "value": "8px",
+    "usage": "Gap between label and field; inside segmented controls."
+   },
+   {
+    "name": "space-3",
+    "value": "12px",
+    "usage": "Vertical button padding; gap between stacked fields."
+   },
+   {
+    "name": "space-4",
+    "value": "16px",
+    "usage": "Minimum gap between two raised elements — shadows need room to fall, so raised siblings never sit closer than this."
+   },
+   {
+    "name": "space-6",
+    "value": "24px",
+    "usage": "Card padding; horizontal button padding."
+   },
+   {
+    "name": "space-8",
+    "value": "32px",
+    "usage": "Gap between cards; section padding on mobile."
+   },
+   {
+    "name": "space-12",
+    "value": "48px",
+    "usage": "Section rhythm on desktop; page gutters."
+   }
+  ],
+  "radius": [
+   {
+    "name": "radius-sm",
+    "value": "10px",
+    "usage": "Chips, segments inside a segmented control."
+   },
+   {
+    "name": "radius-md",
+    "value": "16px",
+    "usage": "Buttons, text fields."
+   },
+   {
+    "name": "radius-lg",
+    "value": "24px",
+    "usage": "Cards and panels."
+   },
+   {
+    "name": "radius-pad",
+    "value": "30px",
+    "usage": "Pads: a squircle-like square that reads as a physical rubber key."
+   },
+   {
+    "name": "radius-full",
+    "value": "999px",
+    "usage": "Pills, switches, icon buttons, slider thumbs, progress tracks."
+   }
+  ],
+  "slug": "tactile",
+  "latin": "Tactus",
+  "english": "Touch",
+  "summary": "Neumorphism with the accessibility repairs: one soft material, controls pressed up or carved in, lit from the upper left."
+ },
+ {
+  "name": "TaskFlow",
+  "themes": [
+   {
+    "id": "light",
+    "name": "Light"
+   },
+   {
+    "id": "dark",
+    "name": "Dark"
+   }
+  ],
+  "colors": [
+   {
+    "n": "surface",
+    "u": "Page background behind cards; the calm mint-white ground of every screen.",
+    "v": {
+     "light": "#F4F8F7",
+     "dark": "#0E1719"
+    }
+   },
+   {
+    "n": "surface-raised",
+    "u": "Cards, the check-in panel and the bottom navigation bar.",
+    "v": {
+     "light": "#FFFFFF",
+     "dark": "#162224"
+    }
+   },
+   {
+    "n": "surface-wash",
+    "u": "Hero sky behind the greeting and landscape; also the encouragement banner ground.",
+    "v": {
+     "light": "#E6F4F0",
+     "dark": "#13302B"
+    }
+   },
+   {
+    "n": "line",
+    "u": "Card hairlines, unselected chip borders, nav bar top edge.",
+    "v": {
+     "light": "#DFE9E7",
+     "dark": "#24363A"
+    }
+   },
+   {
+    "n": "ink",
+    "u": "Primary text and the TaskFlow wordmark; legible on every surface and soft tint in both themes.",
+    "v": {
+     "light": "#1C2A39",
+     "dark": "#E6EFEE"
+    }
+   },
+   {
+    "n": "ink-muted",
+    "u": "Supporting copy, card descriptions, inactive nav labels; 4.9:1+ on surfaces and all soft tints.",
+    "v": {
+     "light": "#586676",
+     "dark": "#9AACAA"
+    }
+   },
+   {
+    "n": "primary",
+    "u": "Base and Energetic accent: primary button fill, the + action, active nav item, selected chip border.",
+    "v": {
+     "light": "#1A7D67",
+     "dark": "#4FC7A6"
+    }
+   },
+   {
+    "n": "on-primary",
+    "u": "Text and icons on a primary fill.",
+    "v": {
+     "light": "#FFFFFF",
+     "dark": "#08231C"
+    }
+   },
+   {
+    "n": "primary-text",
+    "u": "Teal headings and links (\"Make something\", \"Room to breathe\"); on surface-raised or primary-soft.",
+    "v": {
+     "light": "#18735F",
+     "dark": "#6ED6B8"
+    }
+   },
+   {
+    "n": "primary-soft",
+    "u": "Secondary button fill, Energetic chip and Tasks tile tint.",
+    "v": {
+     "light": "#DFF3EC",
+     "dark": "#123A31"
+    }
+   },
+   {
+    "n": "steady",
+    "u": "Steady mode accent: replaces primary for buttons, the + action and active nav when capacity is Steady.",
+    "v": {
+     "light": "#2D69D2",
+     "dark": "#7AA8F7"
+    }
+   },
+   {
+    "n": "on-steady",
+    "u": "Text and icons on a steady fill.",
+    "v": {
+     "light": "#FFFFFF",
+     "dark": "#0A1A33"
+    }
+   },
+   {
+    "n": "steady-text",
+    "u": "Steady headings and links (\"Structure your day\"); on surface-raised or steady-soft.",
+    "v": {
+     "light": "#2257B5",
+     "dark": "#93B9FA"
+    }
+   },
+   {
+    "n": "steady-soft",
+    "u": "Steady secondary button fill, selected Steady chip, steady banner.",
+    "v": {
+     "light": "#E4EDFB",
+     "dark": "#172A4A"
+    }
+   },
+   {
+    "n": "coral",
+    "u": "Overwhelmed and Break through icons. Signals effort or overload, never failure; never a fill under text.",
+    "v": {
+     "light": "#E25A43",
+     "dark": "#F0846F"
+    }
+   },
+   {
+    "n": "coral-text",
+    "u": "Coral headings and button labels (\"Make a dent\"); on surface-raised or coral-soft.",
+    "v": {
+     "light": "#B83A26",
+     "dark": "#F5A08F"
+    }
+   },
+   {
+    "n": "coral-soft",
+    "u": "Overwhelmed chip, Commitments tile and Break-through button tint.",
+    "v": {
+     "light": "#FDE6E0",
+     "dark": "#3D1C16"
+    }
+   },
+   {
+    "n": "violet",
+    "u": "Off capacity and Projects icons.",
+    "v": {
+     "light": "#7B6FD9",
+     "dark": "#A79CF5"
+    }
+   },
+   {
+    "n": "violet-text",
+    "u": "Violet labels on violet-soft.",
+    "v": {
+     "light": "#5A4DC0",
+     "dark": "#BDB4FA"
+    }
+   },
+   {
+    "n": "violet-soft",
+    "u": "Off chip and Projects tile tint.",
+    "v": {
+     "light": "#ECEAFB",
+     "dark": "#27224A"
+    }
+   },
+   {
+    "n": "amber",
+    "u": "Ideas icon (the bulb) and the hero sun. Decorative only, never text.",
+    "v": {
+     "light": "#F2B230",
+     "dark": "#F5C760"
+    }
+   },
+   {
+    "n": "amber-text",
+    "u": "Amber labels on amber-soft.",
+    "v": {
+     "light": "#8A5A00",
+     "dark": "#F7D07A"
+    }
+   },
+   {
+    "n": "amber-soft",
+    "u": "Ideas tile tint.",
+    "v": {
+     "light": "#FFF4DA",
+     "dark": "#3A2C0D"
+    }
+   },
+   {
+    "n": "focus",
+    "u": "Keyboard focus ring, 2px outside a 2px surface gap.",
+    "v": {
+     "light": "#1A7D67",
+     "dark": "#6ED6B8"
+    }
+   }
+  ],
+  "shadows": [
+   {
+    "n": "shadow-card",
+    "v": {
+     "light": "0 1px 2px rgba(28,42,57,.06), 0 4px 12px rgba(28,42,57,.05)",
+     "dark": "0 1px 2px rgba(28,42,57,.06), 0 4px 12px rgba(28,42,57,.05)"
+    }
+   },
+   {
+    "n": "shadow-fab",
+    "v": {
+     "light": "0 6px 16px rgba(26,125,103,.30)",
+     "dark": "0 6px 16px rgba(26,125,103,.30)"
+    }
+   }
+  ],
+  "families": {
+   "sans": "\"Source Sans 3\", \"Source Sans Pro\", system-ui, -apple-system, sans-serif"
+  },
+  "groups": [
+   {
+    "name": "Display",
+    "family": "sans",
+    "styles": [
+     {
+      "name": "hero",
+      "fontSize": "30px",
+      "lineHeight": "34px",
+      "fontWeight": 700,
+      "usage": "The greeting headline: “You’ve got this.” One per screen."
+     },
+     {
+      "name": "wordmark",
+      "fontSize": "28px",
+      "lineHeight": "32px",
+      "fontWeight": 700,
+      "usage": "App title in the header."
+     }
+    ]
+   },
+   {
+    "name": "Text",
+    "family": "sans",
+    "styles": [
+     {
+      "name": "title",
+      "fontSize": "20px",
+      "lineHeight": "26px",
+      "fontWeight": 600,
+      "usage": "Card and banner titles."
+     },
+     {
+      "name": "section",
+      "fontSize": "18px",
+      "lineHeight": "24px",
+      "fontWeight": 600,
+      "usage": "Panel prompts: “How’s your capacity today?”"
+     },
+     {
+      "name": "body",
+      "fontSize": "16px",
+      "lineHeight": "22px",
+      "fontWeight": 400,
+      "usage": "Descriptions, greeting line, button labels at weight 500."
+     },
+     {
+      "name": "caption",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "fontWeight": 500,
+      "usage": "Chip labels, option rows under prompts."
+     },
+     {
+      "name": "tab",
+      "fontSize": "12px",
+      "lineHeight": "16px",
+      "fontWeight": 600,
+      "usage": "Bottom navigation labels."
+     }
+    ]
+   }
+  ],
+  "spacing": [
+   {
+    "name": "space-1",
+    "value": "4px",
+    "usage": "Icon-to-label gaps inside chips."
+   },
+   {
+    "name": "space-2",
+    "value": "8px",
+    "usage": "Gap between stacked lines in a card; chip grid gap."
+   },
+   {
+    "name": "space-3",
+    "value": "12px",
+    "usage": "Gap between cards and tiles."
+   },
+   {
+    "name": "space-4",
+    "value": "16px",
+    "usage": "Card padding; screen side gutter."
+   },
+   {
+    "name": "space-5",
+    "value": "20px",
+    "usage": "Panel padding for the check-in."
+   },
+   {
+    "name": "space-6",
+    "value": "24px",
+    "usage": "Between major sections; hero inset."
+   },
+   {
+    "name": "space-8",
+    "value": "32px",
+    "usage": "Top of the hero below the header."
+   }
+  ],
+  "radius": [
+   {
+    "name": "radius-sm",
+    "value": "8px",
+    "usage": "Inline buttons inside cards."
+   },
+   {
+    "name": "radius-md",
+    "value": "12px",
+    "usage": "Capacity chips, prompt bar."
+   },
+   {
+    "name": "radius-lg",
+    "value": "16px",
+    "usage": "Cards, tiles, banners."
+   },
+   {
+    "name": "radius-xl",
+    "value": "24px",
+    "usage": "The check-in panel overlapping the hero; sheets."
+   },
+   {
+    "name": "radius-pill",
+    "value": "999px",
+    "usage": "The + action, avatar, toggle pills."
+   }
+  ],
+  "slug": "taskflow",
+  "latin": "Fluxus operum",
+  "english": "Flow of work",
+  "summary": "A capacity-first task manager: mint-white ground, soft cards, and a teal accent that turns blue on Steady days."
+ }
+]

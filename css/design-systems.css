@@ -1,0 +1,175 @@
+/* Design systems page.
+   The frame around each plate follows the site (dark, one red, mono caps).
+   Inside a plate (.ds-board) every color, font and shadow comes from that system's
+   own tokens, set by js/design-systems.js as --t-* (colors), --s-* (shadows) and --p-* (roles). */
+
+/* ---------- Intro and index ---------- */
+.ds-intro { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 56px; align-items: end; }
+.ds-intro .hero-copy { gap: 18px; }
+.ds-intro .big { font-size: clamp(72px, 9vw, 128px); line-height: .85; }
+.ds-intro h1 { font: italic 400 40px var(--display); color: #e0d7cd; }
+.ds-index { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.ds-index a { display: flex; flex-direction: column; gap: 10px; padding: 12px; text-decoration: none; border: 1px solid var(--line); background: linear-gradient(var(--panel), var(--bg)); transition: border-color .25s, box-shadow .25s; }
+.ds-index a:hover { border-color: var(--clot); box-shadow: 0 0 30px rgba(230,75,80,.18); color: var(--text); }
+.ds-strip { display: flex; height: 26px; box-shadow: inset 0 0 0 1px var(--line-soft); }
+.ds-strip i { flex: 1; }
+.ds-index b { font: 500 21px/1.1 var(--display); }
+.ds-index small { font: 500 10px/1.5 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--faint); }
+
+/* ---------- Plate frame ---------- */
+.ds-plates { display: flex; flex-direction: column; gap: 88px; }
+.ds-plate { display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 24px; }
+.ds-plate-head { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: end; justify-content: space-between; }
+.ds-plate-head .inc { font-size: 22px; }
+.ds-plate-head h2 { font-size: clamp(36px, 4.5vw, 52px); line-height: 1; margin-top: 6px; }
+.ds-plate-head .meta { margin-top: 10px; }
+.ds-seg { display: inline-flex; border: 1px solid var(--line-strong, #6e6668); }
+.ds-seg button { background: none; border: 0; cursor: pointer; padding: 11px 14px; font: 500 10.5px/1 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+.ds-seg button + button { border-left: 1px solid var(--line); }
+.ds-seg button:hover { color: var(--text); }
+.ds-seg button[aria-pressed="true"] { color: var(--text); background: rgba(230,75,80,.1); box-shadow: inset 0 -1px 0 var(--blood); }
+.ds-seg button[disabled] { cursor: default; }
+
+/* ---------- Inside a plate: the system's own world ---------- */
+.ds-board { background: var(--p-bg); color: var(--p-fg); box-shadow: 0 0 0 1px var(--line), 0 0 0 5px var(--bg), 0 0 0 6px var(--rust); margin: 6px; overflow: hidden; transition: background-color .25s, color .25s; font-size: 15px; line-height: 1.55; }
+.ds-board a:hover { color: inherit; }
+.ds-board button:focus-visible, .ds-board summary:focus-visible { outline: 2px solid var(--p-accent); outline-offset: 2px; }
+.ds-cap { margin: 0 0 12px; font: 500 11px/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--p-muted); }
+
+.ds-spec { padding: 32px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 40px; row-gap: 24px; align-content: start; }
+.ds-spec > * { min-width: 0; grid-column: 1; }
+.ds-spec > .ds-card { grid-column: 2; grid-row: 1 / span 6; align-self: center; }
+.ds-sum { color: var(--p-muted); font-size: 16px; line-height: 1.5; max-width: 52ch; }
+.ds-hero { color: var(--p-fg); text-wrap: balance; overflow-wrap: anywhere; }
+.ds-kit { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.ds-btn { cursor: pointer; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; }
+
+/* collapsible token sections */
+.ds-board details { border-top: 1px solid var(--p-line); }
+.ds-board summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px 32px; font: 500 12px/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--p-fg); }
+.ds-board summary::-webkit-details-marker { display: none; }
+.ds-board summary::before { content: ""; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); transition: transform .2s; }
+.ds-board details[open] > summary::before { transform: rotate(45deg); }
+.ds-board summary span { margin-left: auto; text-align: right; color: var(--p-muted); letter-spacing: .02em; text-transform: none; }
+.ds-board summary:hover span { color: var(--p-fg); }
+.ds-body { padding: 4px 32px 32px; }
+
+/* color swatches, over a check so translucent tokens read as translucent */
+.ds-sw { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 10px; }
+.ds-sw > div { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.ds-sw i { display: block; height: 44px; position: relative; overflow: hidden; box-shadow: inset 0 0 0 1px var(--p-line);
+  background-image: linear-gradient(45deg, var(--p-check) 25%, transparent 25%, transparent 75%, var(--p-check) 75%), linear-gradient(45deg, var(--p-check) 25%, transparent 25%, transparent 75%, var(--p-check) 75%);
+  background-size: 10px 10px; background-position: 0 0, 5px 5px; }
+.ds-sw i::after { content: ""; position: absolute; inset: 0; background: var(--c); }
+.ds-sw b { font: 500 12px/1.2 'IBM Plex Mono', monospace; color: var(--p-fg); overflow-wrap: anywhere; }
+.ds-sw small { font: 400 11px/1.2 'IBM Plex Mono', monospace; color: var(--p-muted); overflow-wrap: anywhere; }
+
+/* type scale */
+.ds-tgroup { font: 500 11px/1 'IBM Plex Mono', monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--p-muted); padding: 18px 0 4px; }
+.ds-tgroup:first-child { padding-top: 0; }
+.ds-trow { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--p-line); }
+.ds-trow:last-child { border-bottom: 0; }
+.ds-trow b { display: block; font: 500 12px/1.3 'IBM Plex Mono', monospace; color: var(--p-fg); }
+.ds-trow small { font: 400 11px/1.4 'IBM Plex Mono', monospace; color: var(--p-muted); }
+.ds-smp { min-width: 0; overflow-wrap: anywhere; color: var(--p-fg); }
+
+/* spacing and radius */
+.ds-scale { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; }
+.ds-scale > * { min-width: 0; }
+.ds-sp { display: flex; flex-direction: column; gap: 7px; }
+.ds-sp div { display: grid; grid-template-columns: 86px 46px minmax(0, 1fr); gap: 10px; align-items: center; font: 400 11px/1 'IBM Plex Mono', monospace; color: var(--p-muted); }
+.ds-sp div span:first-child { color: var(--p-fg); }
+.ds-sp em { display: block; height: 10px; background: var(--p-accent); max-width: 100%; }
+.ds-rd { display: flex; flex-wrap: wrap; gap: 14px; }
+.ds-rd div { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.ds-rd i { width: 64px; height: 48px; border: 1.5px solid var(--p-accent); background: var(--p-panel); }
+.ds-rd b { font: 500 11px/1.2 'IBM Plex Mono', monospace; color: var(--p-fg); }
+.ds-rd small { font: 400 11px/1.2 'IBM Plex Mono', monospace; color: var(--p-muted); }
+
+/* ---------- Specimens, one per system ---------- */
+/* Ainatchi Ritual */
+[data-sys="ritual"] .ds-hero { font: 400 clamp(40px, 5vw, 60px)/.95 'Cormorant Garamond', Georgia, serif; letter-spacing: -.02em; }
+[data-sys="ritual"] .ds-hero em { color: var(--t-blood-bright); }
+[data-sys="ritual"] .ds-inc { font: 400 26px/1 'UnifrakturMaguntia', serif; color: var(--t-blood); text-shadow: 0 0 12px var(--t-glow); letter-spacing: .03em; }
+[data-sys="ritual"] .ds-btn { height: 50px; padding: 0 26px; font: 500 11px/1 'IBM Plex Mono', monospace; letter-spacing: .22em; text-transform: uppercase; }
+[data-sys="ritual"] .ds-b1 { background: linear-gradient(var(--t-blood-top), var(--t-blood-bottom)); color: var(--t-on-blood); border: 1px solid var(--t-blood); box-shadow: var(--s-glow-blood); }
+[data-sys="ritual"] .ds-b1:hover { box-shadow: var(--s-glow-blood-hover); }
+[data-sys="ritual"] .ds-b2 { background: transparent; color: var(--t-text); border: 1px solid var(--t-line-strong); }
+[data-sys="ritual"] .ds-b2:hover { border-color: var(--t-clot); box-shadow: var(--s-glow-button); }
+[data-sys="ritual"] .ds-card { background: linear-gradient(var(--t-panel), var(--t-bg)); border: 1px solid var(--t-line); padding: 28px; display: flex; flex-direction: column; gap: 10px; }
+[data-sys="ritual"] .ds-card h4 { margin: 0; font: 500 26px/1.1 'Cormorant Garamond', serif; color: var(--t-text); }
+[data-sys="ritual"] .ds-card p { font: 400 17px/1.55 'EB Garamond', serif; color: var(--t-text-soft); }
+[data-sys="ritual"] .ds-card span { font: 500 11px/1.7 'IBM Plex Mono', monospace; letter-spacing: .14em; color: var(--t-faint); }
+
+/* Grimoire */
+[data-sys="grimoire"] .ds-hero { font: 600 clamp(34px, 4.4vw, 52px)/1.08 'Cinzel', serif; letter-spacing: .02em; }
+[data-sys="grimoire"] .ds-runes { font: 400 16px/20px 'Noto Sans Runic', serif; letter-spacing: .3em; color: var(--t-rune); }
+[data-sys="grimoire"] .ds-btn { height: 44px; padding: 0 22px; font: 600 13px/1 'Cinzel', serif; letter-spacing: .06em; text-transform: uppercase; border-radius: 2px; }
+[data-sys="grimoire"] .ds-b1 { background: var(--t-crimson); color: var(--t-on-crimson); border: 1px solid var(--t-gold); box-shadow: inset 0 0 0 2px var(--t-crimson), inset 0 0 0 3px var(--t-line-gilt); }
+[data-sys="grimoire"] .ds-b1:hover { background: var(--t-crimson-bright); }
+[data-sys="grimoire"] .ds-b2 { background: transparent; color: var(--t-gold-text); border: 1px solid var(--t-line-gilt); }
+[data-sys="grimoire"] .ds-card { background: var(--t-surface-raised); border: 1px solid var(--t-line-gilt); outline: 1px solid var(--t-line); outline-offset: -5px; border-radius: 4px; box-shadow: var(--s-shadow-raised); padding: 26px; display: flex; flex-direction: column; gap: 8px; }
+[data-sys="grimoire"] .ds-card span { font: 600 12px/16px 'Cinzel', serif; letter-spacing: .18em; color: var(--t-gold-text); }
+[data-sys="grimoire"] .ds-card h4 { margin: 0; font: 600 24px/30px 'Cormorant Garamond', serif; color: var(--t-ink); }
+[data-sys="grimoire"] .ds-card p { font: 400 15px/24px 'Manrope', sans-serif; color: var(--t-ink-muted); }
+
+/* Obsidian */
+[data-sys="obsidian"] .ds-hero { font: 600 32px/38px 'Geist', system-ui, sans-serif; letter-spacing: -.02em; }
+[data-sys="obsidian"] .ds-btn { height: 32px; padding: 0 12px; font: 500 14px/1 'Geist', sans-serif; border-radius: 6px; border: 0; }
+[data-sys="obsidian"] .ds-b1 { background: var(--t-accent); color: var(--t-on-accent); }
+[data-sys="obsidian"] .ds-b1:hover { background: var(--t-accent-hover); }
+[data-sys="obsidian"] .ds-b2 { background: var(--t-surface-2); color: var(--t-text); box-shadow: inset 0 0 0 1px var(--t-border); }
+[data-sys="obsidian"] .ds-mono { font: 400 13px/20px 'Geist Mono', monospace; color: var(--t-text-muted); }
+[data-sys="obsidian"] .ds-card { background: var(--t-surface-1); box-shadow: var(--s-shadow-raised); border-radius: 8px; padding: 16px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+[data-sys="obsidian"] .ds-stat { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+[data-sys="obsidian"] .ds-stat small { font: 500 12px/16px 'Geist', sans-serif; letter-spacing: .02em; text-transform: uppercase; color: var(--t-text-muted); }
+[data-sys="obsidian"] .ds-stat b { font: 600 28px/32px 'Geist', sans-serif; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--t-text); }
+[data-sys="obsidian"] .ds-stat span { font: 400 13px/18px 'Geist', sans-serif; color: var(--t-text-subtle); display: flex; gap: 6px; align-items: center; }
+[data-sys="obsidian"] .ds-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--t-success); }
+
+/* Tactile */
+[data-sys="tactile"] .ds-hero { font: 800 clamp(38px, 4.6vw, 48px)/1.08 'Manrope', sans-serif; letter-spacing: -.02em; }
+[data-sys="tactile"] .ds-btn { height: 46px; padding: 0 24px; font: 600 14px/20px 'Manrope', sans-serif; border-radius: 16px; border: 0; box-shadow: var(--s-raised-sm); }
+[data-sys="tactile"] .ds-b1 { background: var(--t-accent); color: var(--t-on-accent); }
+[data-sys="tactile"] .ds-b2 { background: var(--t-surface); color: var(--t-ink); }
+[data-sys="tactile"] .ds-btn:active { box-shadow: var(--s-inset-sm); }
+[data-sys="tactile"] .ds-switch { width: 52px; height: 30px; border-radius: 999px; background: var(--t-accent); position: relative; box-shadow: var(--s-inset-sm); }
+[data-sys="tactile"] .ds-switch::after { content: ""; position: absolute; right: 3px; top: 3px; width: 24px; height: 24px; border-radius: 50%; background: var(--t-surface); box-shadow: var(--s-raised-sm); }
+[data-sys="tactile"] .ds-pad { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; font: 700 14px/1 'Manrope', sans-serif; background: var(--t-glow-violet-fill); color: var(--t-glow-violet); box-shadow: inset 0 0 14px color-mix(in srgb, var(--t-glow-violet) 35%, transparent), 0 0 0 1px var(--t-glow-violet); }
+[data-sys="tactile"] .ds-card { background: var(--t-surface); border-radius: 24px; box-shadow: var(--s-raised-md); padding: 24px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+[data-sys="tactile"] .ds-dial { width: 96px; height: 96px; border-radius: 50%; box-shadow: var(--s-inset-md); background: var(--t-surface-sunken); display: grid; place-items: center; flex: none; }
+[data-sys="tactile"] .ds-dial b { font: 800 28px/1 'Manrope', sans-serif; color: var(--t-ink); font-variant-numeric: tabular-nums; }
+[data-sys="tactile"] .ds-card small { display: block; font: 600 12px/16px 'Manrope', sans-serif; letter-spacing: .06em; text-transform: uppercase; color: var(--t-ink-muted); }
+[data-sys="tactile"] .ds-card h4 { margin: 4px 0 0; font: 700 24px/30px 'Manrope', sans-serif; color: var(--t-ink); }
+
+/* TaskFlow */
+[data-sys="taskflow"] .ds-wash { background: var(--t-surface-wash); border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 6px; }
+[data-sys="taskflow"] .ds-hero { font: 700 30px/34px 'Source Sans 3', sans-serif; }
+[data-sys="taskflow"] .ds-wash p { font: 400 16px/22px 'Source Sans 3', sans-serif; color: var(--t-ink-muted); }
+[data-sys="taskflow"] .ds-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+[data-sys="taskflow"] .ds-chips span { font: 500 14px/20px 'Source Sans 3', sans-serif; padding: 6px 12px; border-radius: 12px; color: var(--t-ink); }
+[data-sys="taskflow"] .ds-btn { height: 40px; padding: 0 16px; font: 500 16px/22px 'Source Sans 3', sans-serif; border-radius: 8px; border: 0; }
+[data-sys="taskflow"] .ds-b1 { background: var(--t-primary); color: var(--t-on-primary); }
+[data-sys="taskflow"] .ds-b2 { background: var(--t-primary-soft); color: var(--t-primary-text); }
+[data-sys="taskflow"] .ds-card { background: var(--t-surface-raised); border: 1px solid var(--t-line); box-shadow: var(--s-shadow-card); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+[data-sys="taskflow"] .ds-card h4 { margin: 0; font: 600 20px/26px 'Source Sans 3', sans-serif; color: var(--t-primary-text); }
+[data-sys="taskflow"] .ds-card p { font: 400 16px/22px 'Source Sans 3', sans-serif; color: var(--t-ink-muted); }
+
+/* ---------- Motion and smaller screens ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .ds-board, .ds-index a, .ds-board summary::before { transition: none; }
+}
+@media (max-width: 900px) {
+  .ds-spec { grid-template-columns: minmax(0, 1fr); }
+  .ds-spec > .ds-card { grid-column: 1; grid-row: auto; }
+}
+@media (max-width: 620px) {
+  .ds-intro h1 { font-size: 32px; }
+  .ds-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ds-spec { padding: 22px; }
+  .ds-board summary { padding: 16px 22px; }
+  .ds-body { padding: 4px 22px 22px; }
+  .ds-scale { grid-template-columns: minmax(0, 1fr); }
+  .ds-trow { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  [data-sys="obsidian"] .ds-card { grid-template-columns: minmax(0, 1fr); }
+}
