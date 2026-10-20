@@ -42,6 +42,8 @@ export function colorOf(system, name, theme) {
   return token ? token.v[theme] : 'transparent';
 }
 
+const plural = (n, one, many = `${one}s`) => `${n} ${n === 1 ? one : many}`;
+
 export const styleCount = (system) => system.groups.reduce((sum, g) => sum + g.styles.length, 0);
 
 // Every custom property a plate needs for one theme: --t-<token>, --s-<shadow>, --p-<role>.
@@ -60,7 +62,6 @@ export function renderSwatchesHTML(system, theme) {
 }
 
 function renderTypeHTML(system) {
-  const upper = /label|eyebrow|caption|control|meta|badge|field|brand/i;
   return system.groups.map((g) => `<div class="ds-tgroup">${esc(g.name)}</div>` + g.styles.map((s) => {
     const px = parseFloat(s.fontSize);
     const lineHeight = typeof s.lineHeight === 'number' ? s.lineHeight : (parseFloat(s.lineHeight) / px).toFixed(2);
@@ -71,7 +72,7 @@ function renderTypeHTML(system) {
       `font-weight:${s.fontWeight}`,
       `letter-spacing:${s.letterSpacing ?? 'normal'}`,
       `font-style:${s.fontStyle ?? 'normal'}`,
-      `text-transform:${upper.test(s.name) && system.slug !== 'taskflow' ? 'uppercase' : 'none'}`,
+      `text-transform:${/uppercase/i.test(s.usage ?? '') ? 'uppercase' : 'none'}`,
     ].join(';');
     const hidden = g.family === 'rune' ? ' aria-hidden="true"' : '';
     return `<div class="ds-trow"><div><b>${esc(s.name)}</b><small>${esc(s.fontSize)} / ${esc(String(s.lineHeight))} · ${esc(String(s.fontWeight))}</small></div><div class="ds-smp" style="${esc(style)}"${hidden}>${esc(s.sample ?? `${system.name} ${s.name}`)}</div></div>`;
@@ -108,7 +109,7 @@ export function renderPlateHTML(system) {
     <div class="ds-board" data-sys="${esc(s.slug)}">
       <div class="ds-spec"><p class="ds-sum">${esc(s.summary)}</p>${KITS[s.slug]?.() ?? ''}</div>
       <details><summary>Colors<span>${s.colors.length} tokens</span></summary><div class="ds-body"><div class="ds-sw"></div></div></details>
-      <details><summary>Fonts<span>${Object.keys(s.families).length} families · ${styleCount(s)} styles</span></summary><div class="ds-body">${renderTypeHTML(s)}</div></details>
+      <details><summary>Fonts<span>${plural(Object.keys(s.families).length, 'family', 'families')} · ${plural(styleCount(s), 'style')}</span></summary><div class="ds-body">${renderTypeHTML(s)}</div></details>
       <details><summary>Spacing &amp; radius<span>${s.spacing.length} steps · ${s.radius.length} radii</span></summary><div class="ds-body ds-scale">${renderScaleHTML(s)}</div></details>
     </div>
   </section>`;
