@@ -1,5 +1,39 @@
 [
   {
+    "slug": "sift",
+    "title": "Sift",
+    "summary": "Swipe through your Google contacts one card at a time, and archive the ones you no longer need to a spreadsheet instead of losing them.",
+    "homeBlurb": "Sift deals out your contacts one card at a time. Swipe left to archive, right to keep, and nothing is removed until you confirm.",
+    "description": [
+      "A contacts cleaner in the spirit of a photo-swiping app. Sift deals out your Google contacts one card at a time, bare-bones ones first: no number, no last name, no photo. Swipe left to archive, right to keep, up to decide later, and undo any swipe.",
+      "At the end of a session you review your picks and confirm. Each archived contact is written to a Google Sheet with every field it had, its photo is saved to Drive, and only then is it removed from your phone. It runs entirely in the browser, with no server of its own. Made with Claude."
+    ],
+    "year": 2026,
+    "status": "complete",
+    "category": "Apps",
+    "tags": [
+      "Web app",
+      "Google Contacts",
+      "Cleanup"
+    ],
+    "cover": "assets/projects/sift/cover.webp",
+    "thumbnail": "assets/projects/sift/thumbnail.webp",
+    "gallery": [],
+    "links": {
+      "live": "https://sift-contacts.vercel.app/",
+      "liveLabel": "Open Sift",
+      "source": ""
+    },
+    "madeWith": [
+      "Claude"
+    ],
+    "promises": [
+      "Nothing is removed until you review the session and confirm.",
+      "Every archived contact is saved to your sheet before it is deleted.",
+      "Your contacts go only between your browser and Google: Sift has no server and keeps no copy."
+    ]
+  },
+  {
     "slug": "the-story-distilled",
     "title": "[The Story, Distilled]",
     "summary": "Spoiler-aware statistics for The Wandering Inn: word counts, how often anything is mentioned, and every Skill the System grants.",
