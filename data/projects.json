@@ -1,5 +1,41 @@
 [
   {
+    "slug": "intercom",
+    "title": "Intercom",
+    "summary": "An old apartment intercom, made smart without rewiring it: it hears the buzzer, tells your phone, and presses DOOR for you.",
+    "homeBlurb": "Intercom listens for the building buzzer, sends a notification with a Buzz button to your phone, and has a little robot press DOOR when you tap it.",
+    "description": [
+      "A retrofit for a three-button apartment intercom that I wasn’t allowed to rewire. A small microphone sits against the speaker grille and listens for the buzzer, and a battery-powered button pusher sits on the DOOR button. Nothing inside the intercom is touched.",
+      "When the buzzer goes, my phone shows Someone is at the door with Buzz and Dismiss. Buzz only works once the phone is unlocked, and buttons on an old notification do nothing. If nobody answers within two minutes it becomes Missed visitor. A loud door slam can sound like the buzzer, so a ring that comes right as the front door moves is ignored and logged instead.",
+      "It all runs through Home Assistant: an Access dashboard shows a timeline of the doors, every ring and every buzz, with its own Buzz button, and I get an alert if the detector goes offline. The design started in ChatGPT; the firmware, automations and dashboard were made with Claude."
+    ],
+    "year": 2026,
+    "status": "live",
+    "category": "Home",
+    "tags": [
+      "Home Assistant",
+      "ESPHome",
+      "Hardware",
+      "Retrofit"
+    ],
+    "cover": "assets/projects/intercom/cover.webp",
+    "thumbnail": "assets/projects/intercom/thumbnail.webp",
+    "gallery": [],
+    "links": {
+      "live": "",
+      "source": ""
+    },
+    "madeWith": [
+      "Claude",
+      "ChatGPT"
+    ],
+    "promises": [
+      "No audio leaves the detector: it decides on the device and sends only that the buzzer rang.",
+      "The door is never buzzed without a tap from an unlocked phone or a confirmed press on the dashboard.",
+      "Nothing inside the intercom is opened or rewired."
+    ]
+  },
+  {
     "slug": "sift",
     "title": "Sift",
     "summary": "Swipe through your Google contacts one card at a time, and archive the ones you no longer need to a spreadsheet instead of losing them.",
